@@ -1,0 +1,227 @@
+2025-06-23T00:13:22.959Z vite:config bundled config file loaded in 258.65ms
+2025-06-23T00:13:23.025Z vite:config using resolved config: {
+  plugins: [
+    'vite:optimized-deps',
+    'vite:watch-package-data',
+    'vite:pre-alias',
+    'alias',
+    'vite:modulepreload-polyfill',
+    'vite:resolve',
+    'vite:html-inline-proxy',
+    'vite:css',
+    'vite:esbuild',
+    'vite:json',
+    'vite:wasm-helper',
+    'vite:worker',
+    'vite:asset',
+    'vite:vue',
+    'vite:wasm-fallback',
+    'vite:define',
+    'vite:css-post',
+    'vite:worker-import-meta-url',
+    'vite:asset-import-meta-url',
+    'vite:dynamic-import-vars',
+    'vite:import-glob',
+    'vite:client-inject',
+    'vite:import-analysis'
+  ],
+  resolve: {
+    mainFields: [ 'module', 'jsnext:main', 'jsnext' ],
+    browserField: true,
+    conditions: [],
+    extensions: [
+      '.mjs',  '.js',
+      '.mts',  '.ts',
+      '.jsx',  '.tsx',
+      '.json'
+    ],
+    dedupe: [ 'vue' ],
+    preserveSymlinks: false,
+    alias: [ [Object], [Object], [Object] ]
+  },
+  define: {
+    __VUE_OPTIONS_API__: true,
+    __VUE_PROD_DEVTOOLS__: false,
+    __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: false
+  },
+  server: {
+    preTransformRequests: true,
+    port: 3003,
+    open: true,
+    host: true,
+    sourcemapIgnoreList: [Function: isInNodeModules],
+    middlewareMode: false,
+    fs: { strict: true, allow: [Array], deny: [Array] }
+  },
+  build: {
+    target: [ 'es2020', 'edge88', 'firefox78', 'chrome87', 'safari14' ],
+    cssTarget: [ 'es2020', 'edge88', 'firefox78', 'chrome87', 'safari14' ],
+    outDir: 'dist',
+    assetsDir: 'assets',
+    assetsInlineLimit: 4096,
+    cssCodeSplit: true,
+    sourcemap: false,
+    rollupOptions: {},
+    minify: 'esbuild',
+    terserOptions: {},
+    write: true,
+    emptyOutDir: true,
+    copyPublicDir: true,
+    manifest: false,
+    lib: false,
+    ssr: false,
+    ssrManifest: false,
+    ssrEmitAssets: false,
+    reportCompressedSize: true,
+    chunkSizeWarningLimit: 500,
+    watch: null,
+    commonjsOptions: { include: [Array], extensions: [Array] },
+    dynamicImportVarsOptions: { warnOnError: true, exclude: [Array] },
+    modulePreload: { polyfill: true },
+    cssMinify: true
+  },
+  css: { postcss: './postcss.config.js' },
+  ssr: {
+    format: 'esm',
+    target: 'node',
+    noExternal: [ '@supabase/supabase-js' ],
+    external: [],
+    optimizeDeps: { disabled: true, esbuildOptions: [Object] }
+  },
+  test: { globals: true, environment: 'jsdom' },
+  optimizeDeps: {
+    disabled: 'build',
+    include: [ 'vue', 'vue-router', '@vueuse/core' ],
+    exclude: [ '@supabase/supabase-js' ],
+    esbuildOptions: { preserveSymlinks: false }
+  },
+  configFile: 'C:/Users/Felipe/API_VISUAL_DEMO/vite.config.cjs',
+  configFileDependencies: [ 'C:/Users/Felipe/API_VISUAL_DEMO/vite.config.cjs' ],
+  inlineConfig: {
+    root: undefined,
+    base: undefined,
+    mode: undefined,
+    configFile: undefined,
+    logLevel: undefined,
+    clearScreen: undefined,
+    optimizeDeps: { force: undefined },
+    server: { host: undefined, port: 3003 }
+  },
+  root: 'C:/Users/Felipe/API_VISUAL_DEMO',
+  base: '/',
+  rawBase: '/',
+  publicDir: 'C:\\Users\\Felipe\\API_VISUAL_DEMO\\public',
+  cacheDir: 'C:/Users/Felipe/API_VISUAL_DEMO/node_modules/.vite',
+  command: 'serve',
+  mode: 'development',
+  isWorker: false,
+  mainConfig: null,
+  isProduction: false,
+  esbuild: { jsxDev: true },
+  preview: {
+    port: undefined,
+    strictPort: undefined,
+    host: true,
+    https: undefined,
+    open: true,
+    proxy: undefined,
+    cors: undefined,
+    headers: undefined
+  },
+  envDir: 'C:/Users/Felipe/API_VISUAL_DEMO',
+  env: {
+    VITE_MOBLIX_API_KEY: 'SEU_TOKEN_MOBLIX_AQUI',
+    VITE_MOBLIX_API_URL: 'https://api.moblix.com/v1',
+    VITE_MOBLIX_APP_ID: 'SEU_APP_ID_MOBLIX_AQUI',
+    VITE_MOBLIX_ENVIRONMENT: 'production',
+    VITE_MOBLIX_REGION: 'us-east-1',
+    VITE_API_BASE_URL: 'http://localhost:3000',
+    BASE_URL: '/',
+    MODE: 'development',
+    DEV: true,
+    PROD: false
+  },
+  assetsInclude: [Function: assetsInclude],
+  logger: {
+    hasWarned: false,
+    info: [Function: info],
+    warn: [Function: warn],
+    warnOnce: [Function: warnOnce],
+    error: [Function: error],
+    clearScreen: [Function: clearScreen],
+    hasErrorLogged: [Function: hasErrorLogged]
+  },
+  packageCache: Map(1) {
+    'fnpd_C:/Users/Felipe/API_VISUAL_DEMO' => {
+      dir: 'C:\\Users\\Felipe\\API_VISUAL_DEMO',
+      data: [Object],
+      hasSideEffects: [Function: hasSideEffects],
+      webResolvedImports: {},
+      nodeResolvedImports: {},
+      setResolvedCache: [Function: setResolvedCache],
+      getResolvedCache: [Function: getResolvedCache]
+    },
+    set: [Function (anonymous)]
+  },
+  createResolver: [Function: createResolver],
+  worker: {
+    format: 'iife',
+    plugins: [
+      'vite:optimized-deps',
+      'vite:watch-package-data',
+      'vite:pre-alias',
+      'alias',
+      'vite:modulepreload-polyfill',
+      'vite:resolve',
+      'vite:html-inline-proxy',
+      'vite:css',
+      'vite:esbuild',
+      'vite:json',
+      'vite:wasm-helper',
+      'vite:worker',
+      'vite:asset',
+      'vite:wasm-fallback',
+      'vite:define',
+      'vite:css-post',
+      'vite:worker-import-meta-url',
+      'vite:asset-import-meta-url',
+      'vite:dynamic-import-vars',
+      'vite:import-glob',
+      'vite:client-inject',
+      'vite:import-analysis'
+    ],
+    rollupOptions: {},
+    getSortedPlugins: [Function: getSortedPlugins],
+    getSortedPluginHooks: [Function: getSortedPluginHooks]
+  },
+  appType: 'spa',
+  experimental: { importGlobRestoreExtension: false, hmrPartialAccept: false },
+  getSortedPlugins: [Function: getSortedPlugins],
+  getSortedPluginHooks: [Function: getSortedPluginHooks]
+}
+2025-06-23T00:13:23.209Z vite:resolve 4.73ms vue -> C:/Users/Felipe/API_VISUAL_DEMO/node_modules/vue/dist/vue.runtime.esm-bundler.js
+2025-06-23T00:13:23.213Z vite:resolve 2.67ms vue-router -> C:/Users/Felipe/API_VISUAL_DEMO/node_modules/vue-router/dist/vue-router.mjs
+2025-06-23T00:13:23.215Z vite:resolve 1.93ms @vueuse/core -> C:/Users/Felipe/node_modules/@vueuse/core/index.mjs
+2025-06-23T00:13:23.221Z vite:deps scanning for dependencies...
+2025-06-23T00:13:23.253Z vite:esbuild 240.25ms tsconfck init C:/Users/Felipe/API_VISUAL_DEMO
+2025-06-23T00:13:23.325Z vite:deps Crawling dependencies using entries: 
+  C:/Users/Felipe/API_VISUAL_DEMO/index.html
+2025-06-23T00:13:23.365Z vite:hmr [file change] error.log
+2025-06-23T00:13:23.368Z vite:hmr [no modules matched] error.log
+2025-06-23T00:13:23.493Z vite:resolve 0.89ms /src/main.js -> C:/Users/Felipe/API_VISUAL_DEMO/src/main.js
+node:internal/process/promises:289
+            triggerUncaughtException(err, true /* fromPromise */);
+            ^
+
+[Failed to load PostCSS config: Failed to load PostCSS config (searchPath: ./postcss.config.js): [Failed to load PostCSS config] Failed to load PostCSS config (searchPath: ./postcss.config.js): [ReferenceError] module is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\Felipe\API_VISUAL_DEMO\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+ReferenceError: module is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and 'C:\Users\Felipe\API_VISUAL_DEMO\package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///C:/Users/Felipe/API_VISUAL_DEMO/postcss.config.js:1:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:222:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:323:24)
+    at async importDefault (file:///C:/Users/Felipe/API_VISUAL_DEMO/node_modules/vite/dist/node/chunks/dep-bb8a8339.js:36556:18)
+    at async Object.search (file:///C:/Users/Felipe/API_VISUAL_DEMO/node_modules/vite/dist/node/chunks/dep-bb8a8339.js:28992:38)
+]
+
+Node.js v20.12.1
