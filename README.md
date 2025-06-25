@@ -226,4 +226,3 @@ Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalh
 ---
 
 **✈️ Transforme seus sonhos em viagens com o Júlio Martins!**
-
