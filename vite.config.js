@@ -5,8 +5,7 @@ export default defineConfig({
   plugins: [vue()],
   server: {
     proxy: {
-      // Configuração do proxy para a API Moblix
-      // Configuração para a API Moblix
+      // Configuração do proxy para a API Moblix - rotas /api
       '/api': {
         target: 'https://api.moblix.com.br',
         changeOrigin: true,
@@ -14,57 +13,117 @@ export default defineConfig({
         ws: true,
         logLevel: 'debug',
         rewrite: (path) => {
-          console.log('Reescrevendo caminho:', path);
-          // Mantém o caminho original, pois a API espera /api/Token
-          console.log('Mantendo caminho original:', path);
+          console.log('Reescrevendo caminho /api:', path);
           return path;
-        },
-        onProxyReq: (proxyReq, req, res) => {
-          // Log da requisição que está sendo enviada
-          console.log('Enviando requisição para:', req.method, req.url);
-          console.log('Headers originais:', req.headers);
-          
-          // Adiciona cabeçalhos necessários
-          proxyReq.setHeader('Host', 'api.moblix.com.br');
-          proxyReq.setHeader('Origin', 'externo');
-          proxyReq.setHeader('Referer', 'https://moblix.com.br/');
-          proxyReq.setHeader('X-Requested-With', 'XMLHttpRequest');
-          
-          // Se for uma requisição POST, precisamos ajustar o content-length
-          if (req.method === 'POST' && req.body) {
-            const bodyData = JSON.stringify(req.body);
-            proxyReq.setHeader('Content-Length', Buffer.byteLength(bodyData));
-            proxyReq.write(bodyData);
-          }
-          
-          console.log('Headers modificados:', proxyReq.getHeaders());
         },
         configure: (proxy, _options) => {
           proxy.on('error', (err, _req, _res) => {
-            console.error('Erro no proxy:', err);
+            console.error('Erro no proxy /api:', err);
           });
           proxy.on('proxyReq', (proxyReq, req, _res) => {
             // Adiciona os cabeçalhos necessários para a API Moblix
             proxyReq.setHeader('Host', 'api.moblix.com.br');
-            proxyReq.setHeader('Origin', 'externo'); // Específico para a API Moblix
+            proxyReq.setHeader('Origin', 'externo');
             proxyReq.setHeader('Referer', 'https://moblix.com.br/');
             proxyReq.setHeader('X-Requested-With', 'XMLHttpRequest');
             proxyReq.setHeader('Accept', 'application/json');
             
-            // Log da requisição
-            console.log(`[PROXY] ${req.method} ${req.url}`, {
-              headers: proxyReq.getHeaders(),
-              path: proxyReq.path
-            });
+            console.log(`[PROXY /api] ${req.method} ${req.url}`);
           });
           proxy.on('proxyRes', (proxyRes, req, _res) => {
-            // Adiciona headers CORS para permitir a resposta
+            // Adiciona headers CORS
             proxyRes.headers['Access-Control-Allow-Origin'] = '*';
             proxyRes.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, PATCH, OPTIONS';
             proxyRes.headers['Access-Control-Allow-Headers'] = 'X-Requested-With, content-type, Authorization, Origin, Referer';
             
-            // Log da resposta
-            console.log(`[PROXY] Resposta ${proxyRes.statusCode} para ${req.method} ${req.url}`);
+            console.log(`[PROXY /api] Resposta ${proxyRes.statusCode} para ${req.method} ${req.url}`);
+          });
+        }
+      },
+      // Configuração do proxy para a API Moblix - rotas /hotel/api, /flight/api, /oferta/api
+      '/hotel': {
+        target: 'https://api.moblix.com.br',
+        changeOrigin: true,
+        secure: false,
+        ws: true,
+        logLevel: 'debug',
+        rewrite: (path) => {
+          console.log('Reescrevendo caminho /hotel:', path);
+          return path;
+        },
+        configure: (proxy, _options) => {
+          proxy.on('error', (err, _req, _res) => {
+            console.error('Erro no proxy /hotel:', err);
+          });
+          proxy.on('proxyReq', (proxyReq, req, _res) => {
+            // Adiciona os cabeçalhos necessários para a API Moblix
+            proxyReq.setHeader('Host', 'api.moblix.com.br');
+            proxyReq.setHeader('Origin', 'externo');
+            proxyReq.setHeader('Referer', 'https://moblix.com.br/');
+            proxyReq.setHeader('X-Requested-With', 'XMLHttpRequest');
+            proxyReq.setHeader('Accept', 'application/json');
+            
+            console.log(`[PROXY /hotel] ${req.method} ${req.url}`);
+          });
+          proxy.on('proxyRes', (proxyRes, req, _res) => {
+            // Adiciona headers CORS
+            proxyRes.headers['Access-Control-Allow-Origin'] = '*';
+            proxyRes.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, PATCH, OPTIONS';
+            proxyRes.headers['Access-Control-Allow-Headers'] = 'X-Requested-With, content-type, Authorization, Origin, Referer';
+            
+            console.log(`[PROXY /hotel] Resposta ${proxyRes.statusCode} para ${req.method} ${req.url}`);
+          });
+        }
+      },
+      // Configuração do proxy para a API Moblix - rotas /flight/api
+      '/flight': {
+        target: 'https://api.moblix.com.br',
+        changeOrigin: true,
+        secure: false,
+        ws: true,
+        logLevel: 'debug',
+        configure: (proxy, _options) => {
+          proxy.on('proxyReq', (proxyReq, req, _res) => {
+            proxyReq.setHeader('Host', 'api.moblix.com.br');
+            proxyReq.setHeader('Origin', 'externo');
+            proxyReq.setHeader('Referer', 'https://moblix.com.br/');
+            proxyReq.setHeader('X-Requested-With', 'XMLHttpRequest');
+            proxyReq.setHeader('Accept', 'application/json');
+            
+            console.log(`[PROXY /flight] ${req.method} ${req.url}`);
+          });
+          proxy.on('proxyRes', (proxyRes, req, _res) => {
+            proxyRes.headers['Access-Control-Allow-Origin'] = '*';
+            proxyRes.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, PATCH, OPTIONS';
+            proxyRes.headers['Access-Control-Allow-Headers'] = 'X-Requested-With, content-type, Authorization, Origin, Referer';
+            
+            console.log(`[PROXY /flight] Resposta ${proxyRes.statusCode} para ${req.method} ${req.url}`);
+          });
+        }
+      },
+      // Configuração do proxy para a API Moblix - rotas /oferta/api
+      '/oferta': {
+        target: 'https://api.moblix.com.br',
+        changeOrigin: true,
+        secure: false,
+        ws: true,
+        logLevel: 'debug',
+        configure: (proxy, _options) => {
+          proxy.on('proxyReq', (proxyReq, req, _res) => {
+            proxyReq.setHeader('Host', 'api.moblix.com.br');
+            proxyReq.setHeader('Origin', 'externo');
+            proxyReq.setHeader('Referer', 'https://moblix.com.br/');
+            proxyReq.setHeader('X-Requested-With', 'XMLHttpRequest');
+            proxyReq.setHeader('Accept', 'application/json');
+            
+            console.log(`[PROXY /oferta] ${req.method} ${req.url}`);
+          });
+          proxy.on('proxyRes', (proxyRes, req, _res) => {
+            proxyRes.headers['Access-Control-Allow-Origin'] = '*';
+            proxyRes.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, PATCH, OPTIONS';
+            proxyRes.headers['Access-Control-Allow-Headers'] = 'X-Requested-With, content-type, Authorization, Origin, Referer';
+            
+            console.log(`[PROXY /oferta] Resposta ${proxyRes.statusCode} para ${req.method} ${req.url}`);
           });
         }
       }

@@ -1,48 +1,71 @@
 <template>
-  <div class="flights min-h-screen bg-gray-50">
-    <!-- Header -->
-    <header class="bg-white shadow-sm border-b border-gray-200">
+  <div class="flights min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100">
+    <!-- Header Elegante -->
+    <header class="bg-white/80 backdrop-blur-md shadow-xl border-b border-blue-200/30">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-          <div class="flex items-center">
-            <h1 class="text-xl font-semibold text-gray-900">
-              Busca de Voos - Moblix API
-            </h1>
+        <div class="flex justify-between items-center h-20">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center shadow-lg">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+              </svg>
+            </div>
+            <div>
+              <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent">
+                ✈️ Busca de Voos
+              </h1>
+              <p class="text-sm text-gray-600">Powered by Moblix API</p>
+            </div>
           </div>
           <div class="flex items-center space-x-4">
             <router-link 
               to="/ofertas" 
-              class="inline-flex items-center px-4 py-2 border border-yellow-200 text-sm font-medium rounded-md shadow-sm text-yellow-700 bg-yellow-50 hover:bg-yellow-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500"
+              class="inline-flex items-center px-6 py-3 border border-amber-200 text-sm font-semibold rounded-xl shadow-md text-amber-700 bg-gradient-to-r from-amber-50 to-yellow-50 hover:from-amber-100 hover:to-yellow-100 transition-all duration-300 transform hover:scale-105"
             >
-              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
               </svg>
-              Ofertas Especiais
+              ⭐ Ofertas Especiais
             </router-link>
             <router-link 
               to="/dashboard" 
-              class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+              class="inline-flex items-center px-6 py-3 border border-transparent text-sm font-semibold rounded-xl shadow-lg text-white bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 transition-all duration-300 transform hover:scale-105"
             >
-              Voltar para o Dashboard
+              <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+              </svg>
+              Dashboard
             </router-link>
           </div>
         </div>
       </div>
     </header>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <!-- Hero Section -->
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">
+          ✈️ Encontre os <span class="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">Melhores Voos</span>
+        </h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          Busque e compare as melhores opções de voos com preços exclusivos para sua próxima viagem
+        </p>
+      </div>
+
       <!-- Formulário de Busca -->
-      <div class="bg-white rounded-xl shadow-sm p-6 mb-8">
-        <div class="flex justify-between items-center mb-4">
-          <h2 class="text-lg font-medium text-gray-900">Parâmetros da Busca</h2>
-          <div class="flex items-center">
-            <span class="mr-2 text-sm text-gray-700">Tipo de Busca:</span>
+      <div class="bg-white/80 backdrop-blur-md rounded-2xl shadow-2xl border border-blue-100/50 p-8 mb-12">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-2xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+            🔍 Parâmetros da Busca
+          </h2>
+          <div class="flex items-center space-x-3">
+            <span class="text-sm font-medium text-gray-700">📊 Tipo de Busca:</span>
             <select 
               v-model="searchType" 
-              class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md"
+              class="px-4 py-2 bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-200 rounded-xl text-blue-800 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
             >
-              <option value="padrao">Padrão</option>
-              <option value="reserva-facil">Reserva Fácil (Rextur/Eferatur)</option>
+              <option value="padrao">✨ Padrão</option>
+              <option value="reserva-facil">🎆 Reserva Fácil (Rextur/Eferatur)</option>
             </select>
           </div>
         </div>
@@ -59,13 +82,13 @@
                   v-model="searchParams.origem" 
                   @input="searchAirports('origin')"
                   @focus="handleInputFocus('origin')"
-                  @blur="setTimeout(() => { showAirportSuggestions.origin = false }, 200)"
+                  @blur="handleBlur('origin')"
                   @keydown.down.prevent="handleSuggestionKeyDown($event, 'origin')"
                   @keydown.up.prevent="handleSuggestionKeyDown($event, 'origin')"
                   @keydown.enter.prevent="handleSuggestionKeyDown($event, 'origin')"
                   @keydown.esc="showAirportSuggestions.origin = false"
                   placeholder="Cidade ou código IATA" 
-                  class="block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                  class="block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 text-black focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                   required
                   autocomplete="off"
                   aria-autocomplete="list"
@@ -143,13 +166,13 @@
                   v-model="searchParams.destino" 
                   @input="searchAirports('destination')"
                   @focus="handleInputFocus('destination')"
-                  @blur="setTimeout(() => { showAirportSuggestions.destination = false }, 200)"
+                  @blur="handleBlur('destination')"
                   @keydown.down.prevent="handleSuggestionKeyDown($event, 'destination')"
                   @keydown.up.prevent="handleSuggestionKeyDown($event, 'destination')"
                   @keydown.enter.prevent="handleSuggestionKeyDown($event, 'destination')"
                   @keydown.esc="showAirportSuggestions.destination = false"
                   placeholder="Cidade ou código IATA" 
-                  class="block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                  class="block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 text-black focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                   required
                   autocomplete="off"
                   aria-autocomplete="list"
@@ -209,7 +232,7 @@
                 id="departureDate" 
                 v-model="searchParams.ida" 
                 :min="today"
-                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 text-black focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                 required
               >
             </div>
@@ -223,7 +246,7 @@
                 v-model="searchParams.volta" 
                 :min="searchParams.ida || today"
                 :disabled="searchParams.soIda"
-                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 text-black focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
               >
             </div>
           </div>
@@ -242,7 +265,7 @@
                     v-model.number="searchParams.adultos" 
                     min="1" 
                     max="9"
-                    class="focus:ring-blue-500 focus:border-blue-500 block w-full rounded-none rounded-l-md pl-3 sm:text-sm border-gray-300"
+                    class="focus:ring-blue-500 focus:border-blue-500 block w-full rounded-none rounded-l-md pl-3 text-black sm:text-sm border-gray-300"
                   >
                   <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
                     <span class="text-gray-500 sm:text-sm">Adultos</span>
@@ -256,7 +279,7 @@
                     v-model.number="searchParams.criancas" 
                     min="0" 
                     max="8"
-                    class="focus:ring-blue-500 focus:border-blue-500 block w-full rounded-none pl-3 sm:text-sm border-gray-300"
+                    class="focus:ring-blue-500 focus:border-blue-500 block w-full rounded-none pl-3 text-black sm:text-sm border-gray-300"
                   >
                   <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
                     <span class="text-gray-500 sm:text-sm">Crianças</span>
@@ -270,7 +293,7 @@
                     v-model.number="searchParams.bebes" 
                     min="0" 
                     max="8"
-                    class="focus:ring-blue-500 focus:border-blue-500 block w-full rounded-none rounded-r-md pl-3 sm:text-sm border-gray-300"
+                    class="focus:ring-blue-500 focus:border-blue-500 block w-full rounded-none rounded-r-md pl-3 text-black sm:text-sm border-gray-300"
                   >
                   <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
                     <span class="text-gray-500 sm:text-sm">Bebês</span>
@@ -285,7 +308,7 @@
               <select 
                 id="airline" 
                 v-model="searchParams.companhia" 
-                class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md"
+                class="mt-1 block w-full pl-3 pr-10 py-2 text-base text-black border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md"
               >
                 <option value="-1">Todas as companhias</option>
                 <option value="1">LATAM</option>
@@ -303,7 +326,7 @@
               <select 
                 id="sortBy" 
                 v-model="searchParams.orderBy" 
-                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 text-black focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
               >
                 <option value="tempo">Menor tempo</option>
                 <option value="preco">Menor preço</option>
@@ -340,7 +363,7 @@
                     v-model.number="searchParams.Adultos" 
                     min="1" 
                     max="9"
-                    class="focus:ring-blue-500 focus:border-blue-500 block w-full rounded-none rounded-l-md pl-3 sm:text-sm border-gray-300"
+                    class="focus:ring-blue-500 focus:border-blue-500 block w-full rounded-none rounded-l-md pl-3 text-black sm:text-sm border-gray-300"
                   >
                   <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
                     <span class="text-gray-500 sm:text-sm">Adultos</span>
@@ -354,7 +377,7 @@
                     v-model.number="searchParams.Criancas" 
                     min="0" 
                     max="8"
-                    class="focus:ring-blue-500 focus:border-blue-500 block w-full rounded-none pl-3 sm:text-sm border-gray-300"
+                    class="focus:ring-blue-500 focus:border-blue-500 block w-full rounded-none pl-3 text-black sm:text-sm border-gray-300"
                   >
                   <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
                     <span class="text-gray-500 sm:text-sm">Crianças</span>
@@ -368,7 +391,7 @@
                     v-model.number="searchParams.Bebes" 
                     min="0" 
                     max="8"
-                    class="focus:ring-blue-500 focus:border-blue-500 block w-full rounded-none rounded-r-md pl-3 sm:text-sm border-gray-300"
+                    class="focus:ring-blue-500 focus:border-blue-500 block w-full rounded-none rounded-r-md pl-3 text-black sm:text-sm border-gray-300"
                   >
                   <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
                     <span class="text-gray-500 sm:text-sm">Bebês</span>
@@ -383,7 +406,7 @@
               <select 
                 id="rf-airline" 
                 v-model="searchParams.Companhia" 
-                class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md"
+                class="mt-1 block w-full pl-3 pr-10 py-2 text-base text-black border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md"
               >
                 <option value="1">LATAM</option>
                 <option value="2">GOL/Smiles</option>
@@ -399,7 +422,7 @@
               <select 
                 id="sortBy" 
                 v-model="searchParams.orderBy" 
-                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 text-black focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
               >
                 <option value="tempo">Menor tempo</option>
                 <option value="preco">Menor preço</option>
@@ -407,24 +430,24 @@
             </div>
           </div>
 
-          <div class="flex justify-end">
+          <div class="flex justify-center mt-8">
             <button 
               type="submit" 
               :disabled="isLoading"
-              class="inline-flex items-center px-6 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+              class="group inline-flex items-center px-12 py-4 border border-transparent text-lg font-bold rounded-2xl shadow-2xl text-white bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 focus:outline-none focus:ring-4 focus:ring-blue-500/50 focus:ring-offset-2 transform transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
             >
-              <span v-if="isLoading">
-                <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <span v-if="isLoading" class="flex items-center">
+                <svg class="animate-spin -ml-1 mr-3 h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                   <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                   <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                 </svg>
-                Buscando...
+                🔍 Buscando voos...
               </span>
-              <span v-else>
-                <svg class="-ml-1 mr-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <span v-else class="flex items-center">
+                <svg class="-ml-1 mr-3 h-6 w-6 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                 </svg>
-                Buscar Voos
+                ✈️ Buscar Voos
               </span>
             </button>
           </div>
@@ -433,12 +456,21 @@
 
       <!-- Resultados -->
       <div v-if="searchResults">
-        <div class="flex justify-between items-center mb-4">
-          <h2 class="text-lg font-medium text-gray-900">
-            {{ searchResults.length }} voos encontrados
-          </h2>
-          <div class="text-sm text-gray-500">
-            Ordenado por: {{ searchParams.orderBy === 'tempo' ? 'Menor tempo' : 'Menor preço' }}
+        <div class="text-center mb-8">
+          <div class="inline-flex items-center bg-white/80 backdrop-blur-md rounded-2xl shadow-lg border border-blue-100/50 px-8 py-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-xl flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </div>
+            <div class="text-left">
+              <h2 class="text-2xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+                {{ searchResults.length }} voos encontrados
+              </h2>
+              <div class="text-sm text-gray-600">
+                ✨ Ordenado por: {{ searchParams.orderBy === 'tempo' ? 'Menor tempo' : 'Menor preço' }}
+              </div>
+            </div>
           </div>
         </div>
 
@@ -457,15 +489,15 @@
               <div class="flex justify-between items-start">
                 <div>
                   <h3 class="text-lg leading-6 font-medium text-gray-900">
-                    {{ formatCurrency(flight.fareGroup.priceWithTax) }}
+                    {{ formatCurrency(flight.priceWithTax || flight.price || flight.totalPrice || 0) }}
                     <span class="text-sm font-normal text-gray-500">/ por pessoa</span>
                   </h3>
                   <p class="mt-1 text-sm text-gray-500">
-                    {{ flight.segments[0].departure }} → {{ flight.segments[flight.segments.length - 1].arrival }}
+                    {{ flight.segments && flight.segments.length > 0 ? flight.segments[0].departure : 'N/A' }} → {{ flight.segments && flight.segments.length > 0 ? flight.segments[flight.segments.length - 1].arrival : 'N/A' }}
                   </p>
                 </div>
                 <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-                  {{ flight.segments[0].legs[0].operatedBy.name }}
+                  {{ flight.segments && flight.segments[0] && flight.segments[0].legs && flight.segments[0].legs[0] && flight.segments[0].legs[0].operatedBy ? flight.segments[0].legs[0].operatedBy.name : 'Companhia Aérea' }}
                 </span>
               </div>
 
@@ -499,7 +531,7 @@
                         </span>
                       </div>
                       <div class="mt-1 text-xs text-gray-400">
-                        {{ segment.legs[0].operatedBy.name }} {{ segment.legs[0].flightNumber }}
+                        {{ segment.legs && segment.legs[0] && segment.legs[0].operatedBy ? segment.legs[0].operatedBy.name : 'N/A' }} {{ segment.legs && segment.legs[0] ? segment.legs[0].flightNumber : '' }}
                       </div>
                     </div>
                   </div>
@@ -536,7 +568,7 @@
                         </span>
                       </div>
                       <div class="mt-1 text-xs text-gray-400">
-                        {{ segment.legs[0].operatedBy.name }} {{ segment.legs[0].flightNumber }}
+                        {{ segment.legs && segment.legs[0] && segment.legs[0].operatedBy ? segment.legs[0].operatedBy.name : 'N/A' }} {{ segment.legs && segment.legs[0] ? segment.legs[0].flightNumber : '' }}
                       </div>
                     </div>
                   </div>
@@ -631,7 +663,7 @@ export default {
       companhia: -1,
       soIda: false,
       numeroPagina: 1,
-      quantidadePorPagina: 10,
+      quantidadePorPagina: 100,
       orderBy: 'tempo',
       
       // Parâmetros para Reserva Fácil (com letra maiúscula para compatibilidade com a API)
@@ -676,14 +708,63 @@ export default {
             soIda: searchParams.value.soIda || false,
             orderBy: searchParams.value.orderBy || 'tempo',
             numeroPagina: searchParams.value.numeroPagina || 1,
-            quantidadePorPagina: searchParams.value.quantidadePorPagina || 10
+            quantidadePorPagina: searchParams.value.quantidadePorPagina || 100
           };
           
           console.log('Parâmetros da busca padrão:', params);
           response = await moblixApiService.consultarVoos(params);
           
-          // Garante que temos um array para trabalhar
-          searchResults.value = Array.isArray(response) ? response : (response?.Data || []);
+          // Processa diferentes formatos de resposta da API Moblix
+          let rawFlights = [];
+          
+          if (Array.isArray(response)) {
+            rawFlights = response;
+          } else if (response?.Data && Array.isArray(response.Data) && response.Data.length > 0) {
+            // Formato específico da API Moblix: response.Data[0].flights
+            const firstDataItem = response.Data[0];
+            if (firstDataItem?.flights && Array.isArray(firstDataItem.flights)) {
+              rawFlights = firstDataItem.flights;
+            } else {
+              rawFlights = response.Data;
+            }
+          } else if (response?.flights && Array.isArray(response.flights)) {
+            rawFlights = response.flights;
+          } else if (response?.result && Array.isArray(response.result)) {
+            rawFlights = response.result;
+          } else if (response?.Response && Array.isArray(response.Response)) {
+            rawFlights = response.Response;
+          } else if (response && typeof response === 'object' && !Array.isArray(response)) {
+            // Se a resposta é um objeto, pode conter os voos em alguma propriedade
+            const possibleArrays = Object.values(response).filter(val => Array.isArray(val));
+            if (possibleArrays.length > 0) {
+              rawFlights = possibleArrays[0];
+            }
+          }
+          
+          console.log('=== VOOS EXTRAÍDOS PARA NORMALIZAÇÃO ===');
+          console.log('Quantidade de voos:', rawFlights.length);
+          console.log('Todos os voos:', rawFlights);
+          
+          if (rawFlights.length > 0) {
+            console.log('Primeiro voo detalhado:', rawFlights[0]);
+            console.log('Propriedades do primeiro voo:', Object.keys(rawFlights[0] || {}));
+            
+            // Procura por propriedades de preço no primeiro voo
+            const firstFlight = rawFlights[0];
+            console.log('Procurando preços no primeiro voo:');
+            console.log('- priceWithTax:', firstFlight?.priceWithTax);
+            console.log('- price:', firstFlight?.price);
+            console.log('- totalPrice:', firstFlight?.totalPrice);
+            console.log('- Preco:', firstFlight?.Preco);
+            console.log('- PrecoTotal:', firstFlight?.PrecoTotal);
+            console.log('- ValorTotal:', firstFlight?.ValorTotal);
+            console.log('- Amount:', firstFlight?.Amount);
+            console.log('- fareGroup:', firstFlight?.fareGroup);
+          }
+          console.log('=== FIM VOOS EXTRAÍDOS ===');
+          
+          // Normaliza a estrutura dos voos para o formato esperado pelo template
+          searchResults.value = rawFlights.map(flight => normalizeFlight(flight));
           
         } else {
           // Busca via Reserva Fácil
@@ -709,8 +790,39 @@ export default {
           searchResults.value = response?.Data || response || [];
         }
         
-        console.log('Resultados da busca:', searchResults.value);
+        console.log('=== DEBUG DA RESPOSTA DA API ===');
+        console.log('Resposta bruta da API:', response);
+        console.log('Tipo da resposta:', typeof response);
+        console.log('É array?', Array.isArray(response));
         
+        // Imprime todas as propriedades do objeto resposta
+        if (response && typeof response === 'object') {
+          console.log('Propriedades da resposta:', Object.keys(response));
+          console.log('Valores das propriedades:', response);
+          
+          // Procura por arrays dentro da resposta
+          Object.keys(response).forEach(key => {
+            if (Array.isArray(response[key])) {
+              console.log(`Propriedade "${key}" é um array com ${response[key].length} itens`);
+              if (response[key].length > 0) {
+                console.log(`Primeiro item de "${key}":`, response[key][0]);
+              }
+            }
+          });
+        }
+        
+        console.log('searchResults.value:', searchResults.value);
+        console.log('Tipo de searchResults.value:', typeof searchResults.value);
+        console.log('É array?', Array.isArray(searchResults.value));
+        console.log('Comprimento:', searchResults.value?.length);
+        
+        if (searchResults.value && searchResults.value.length > 0) {
+          console.log('Primeiro item normalizado:', searchResults.value[0]);
+          console.log('Propriedades do primeiro item:', Object.keys(searchResults.value[0] || {}));
+        }
+        console.log('=== FIM DEBUG ===');
+        
+        // Verifica se há resultados reais da API
         if (!searchResults.value || searchResults.value.length === 0) {
           throw new Error('Nenhum voo encontrado para os parâmetros informados');
         }
@@ -718,7 +830,52 @@ export default {
         toast.success(`${searchResults.value.length} voos encontrados`);
       } catch (error) {
         console.error('Erro ao buscar voos:', error);
-        const errorMessage = error.response?.data?.MensagemErro || error.message || 'Tente novamente mais tarde';
+        
+        // Log detalhado do erro para debug
+        console.error('Detalhes completos do erro:', {
+          message: error.message,
+          status: error.response?.status,
+          statusText: error.response?.statusText,
+          data: error.response?.data,
+          config: {
+            method: error.config?.method,
+            url: error.config?.url,
+            baseURL: error.config?.baseURL,
+            headers: error.config?.headers
+          },
+          code: error.code,
+          name: error.name
+        });
+        
+        // Trata diferentes tipos de erro
+        let errorMessage = 'Erro desconhecido';
+        
+        if (error.response) {
+          // Erro da resposta do servidor
+          const status = error.response.status;
+          const data = error.response.data;
+          
+          if (status === 404) {
+            errorMessage = 'Endpoint da API não encontrado. Verifique a configuração do proxy.';
+          } else if (status === 401 || status === 403) {
+            errorMessage = 'Erro de autenticação. Verificando credenciais...';
+          } else if (status >= 500) {
+            errorMessage = 'Erro interno do servidor. Tente novamente em alguns minutos.';
+          } else if (data?.MensagemErro) {
+            errorMessage = data.MensagemErro;
+          } else if (data?.Erro?.Message) {
+            errorMessage = data.Erro.Message;
+          } else {
+            errorMessage = `Erro ${status}: ${error.response.statusText || 'Erro na requisição'}`;
+          }
+        } else if (error.request) {
+          // Erro de rede
+          errorMessage = 'Erro de conexão. Verifique sua internet e tente novamente.';
+        } else {
+          // Erro de configuração
+          errorMessage = error.message || 'Erro na configuração da requisição';
+        }
+        
         toast.error(`Erro ao buscar voos: ${errorMessage}`);
       } finally {
         isLoading.value = false;
@@ -925,6 +1082,15 @@ export default {
       showAirportSuggestions.value[fieldType] = true;
       focusedSuggestionIndex.value[fieldType] = -1;
     };
+    
+    // Manipulador de perda de foco no campo de entrada
+    const handleBlur = (fieldType) => {
+      // Pequeno delay para permitir clique em sugestão
+      setTimeout(() => {
+        showAirportSuggestions.value[fieldType] = false;
+        focusedSuggestionIndex.value[fieldType] = -1;
+      }, 200);
+    };
 
     // Troca os valores entre origem e destino
     const swapOriginDestination = () => {
@@ -1003,6 +1169,76 @@ export default {
       }
     }
     
+    // Normaliza um objeto de voo para o formato esperado pelo template
+    const normalizeFlight = (flight) => {
+      if (!flight || typeof flight !== 'object') {
+        console.warn('Voo inválido para normalização:', flight);
+        return {
+          id: Math.random().toString(36),
+          priceWithTax: 0,
+          price: 0,
+          totalPrice: 0,
+          segments: []
+        };
+      }
+      
+      // Extrai preços de diferentes formatos possíveis
+      const extractPrice = (obj) => {
+        // Prioridade 1: fareGroup.priceWithTax (formato da API Moblix)
+        if (obj?.fareGroup) {
+          const { priceWithTax, price, totalPrice } = obj.fareGroup;
+          if (typeof priceWithTax === 'number') return priceWithTax;
+          if (typeof price === 'number') return price;
+          if (typeof totalPrice === 'number') return totalPrice;
+        }
+        
+        // Prioridade 2: Propriedades diretas do objeto
+        if (typeof obj?.priceWithTax === 'number') return obj.priceWithTax;
+        if (typeof obj?.price === 'number') return obj.price;
+        if (typeof obj?.totalPrice === 'number') return obj.totalPrice;
+        
+        // Prioridade 3: Formatos alternativos
+        if (typeof obj?.Preco === 'number') return obj.Preco;
+        if (typeof obj?.PrecoTotal === 'number') return obj.PrecoTotal;
+        if (typeof obj?.ValorTotal === 'number') return obj.ValorTotal;
+        if (typeof obj?.Amount === 'number') return obj.Amount;
+        
+        return 0;
+      };
+      
+      // Extrai segmentos de diferentes formatos possíveis - APENAS DADOS REAIS
+      const extractSegments = (obj) => {
+        // Prioridade para dados reais da API Moblix
+        if (Array.isArray(obj?.segments)) return obj.segments;
+        if (Array.isArray(obj?.Segments)) return obj.Segments;
+        if (Array.isArray(obj?.trechos)) return obj.trechos;
+        if (Array.isArray(obj?.Trechos)) return obj.Trechos;
+        if (Array.isArray(obj?.legs)) return obj.legs;
+        if (Array.isArray(obj?.Legs)) return obj.Legs;
+        
+        // Se não há dados reais de segmentos, retorna array vazio
+        return [];
+      };
+      
+      const normalizedFlight = {
+        id: flight.id || flight.Id || flight.uid || Math.random().toString(36),
+        priceWithTax: extractPrice(flight),
+        price: extractPrice(flight),
+        totalPrice: extractPrice(flight),
+        segments: extractSegments(flight),
+        // Apenas mostra dados de volta se existirem DADOS REAIS na API
+        segmentsBack: (flight.segmentsBack && Array.isArray(flight.segmentsBack) && flight.segmentsBack.length > 0) ? 
+                      extractSegments(flight.segmentsBack) : null
+      };
+      
+      console.log('Voo normalizado:', {
+        original: flight,
+        normalized: normalizedFlight
+      });
+      
+      return normalizedFlight;
+    };
+    
     // Formata o valor em moeda
     const formatCurrency = (value) => {
       if (typeof value !== 'number') return 'R$ 0,00'
@@ -1038,6 +1274,7 @@ export default {
       // Aqui você pode adicionar a lógica para redirecionar para a página de detalhes ou fazer o checkout
     }
     
+    
     return {
       // Estados
       isLoading,
@@ -1064,6 +1301,7 @@ export default {
       focusedSuggestionIndex,
       handleSuggestionKeyDown,
       handleInputFocus,
+      handleBlur,
       
       // Outras funções
       selectFlight

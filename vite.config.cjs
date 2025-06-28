@@ -40,8 +40,7 @@ export default defineConfig({
       '/api': {
         target: 'https://api.moblix.com.br',
         changeOrigin: true,
-        // Remove o prefixo /api para evitar duplicação
-        rewrite: (path) => path.replace(/^\/api/, ''),
+        // NÃO remove o prefixo /api - mantém o path original
         secure: true,
         configure: (proxy, _options) => {
           proxy.on('error', (err, _req, _res) => {
@@ -54,6 +53,92 @@ export default defineConfig({
           });
           proxy.on('proxyRes', (proxyRes, req, _res) => {
             console.log('Received Response from the Target:', proxyRes.statusCode, req.url);
+          });
+        }
+      },
+      '/flight': {
+        target: 'https://api.moblix.com.br',
+        changeOrigin: true,
+        secure: true,
+        configure: (proxy, _options) => {
+          proxy.on('error', (err, _req, _res) => {
+            console.log('flight proxy error', err);
+          });
+          proxy.on('proxyReq', (proxyReq, req, _res) => {
+            proxyReq.setHeader('Origin', 'externo');
+            console.log('Flight Request:', req.method, req.url);
+          });
+          proxy.on('proxyRes', (proxyRes, req, _res) => {
+            console.log('Flight Response:', proxyRes.statusCode, req.url);
+          });
+        }
+      },
+      '/hotel': {
+        target: 'https://api.moblix.com.br',
+        changeOrigin: true,
+        secure: true,
+        configure: (proxy, _options) => {
+          proxy.on('error', (err, _req, _res) => {
+            console.log('hotel proxy error', err);
+          });
+          proxy.on('proxyReq', (proxyReq, req, _res) => {
+            proxyReq.setHeader('Origin', 'externo');
+            console.log('Hotel Request:', req.method, req.url);
+          });
+          proxy.on('proxyRes', (proxyRes, req, _res) => {
+            console.log('Hotel Response:', proxyRes.statusCode, req.url);
+          });
+        }
+      },
+      '/oferta': {
+        target: 'https://api.moblix.com.br',
+        changeOrigin: true,
+        secure: true,
+        configure: (proxy, _options) => {
+          proxy.on('error', (err, _req, _res) => {
+            console.log('oferta proxy error', err);
+          });
+          proxy.on('proxyReq', (proxyReq, req, _res) => {
+            proxyReq.setHeader('Origin', 'externo');
+            console.log('Oferta Request:', req.method, req.url);
+          });
+          proxy.on('proxyRes', (proxyRes, req, _res) => {
+            console.log('Oferta Response:', proxyRes.statusCode, req.url);
+          });
+        }
+      },
+      '/product': {
+        target: 'https://api.moblix.com.br',
+        changeOrigin: true,
+        secure: true,
+        configure: (proxy, _options) => {
+          proxy.on('error', (err, _req, _res) => {
+            console.log('product proxy error', err);
+          });
+          proxy.on('proxyReq', (proxyReq, req, _res) => {
+            proxyReq.setHeader('Origin', 'externo');
+            console.log('Product Request:', req.method, req.url);
+          });
+          proxy.on('proxyRes', (proxyRes, req, _res) => {
+            console.log('Product Response:', proxyRes.statusCode, req.url);
+          });
+        }
+      },
+      '/moblix-api': {
+        target: 'https://api.moblix.com.br',
+        changeOrigin: true,
+        secure: true,
+        // NÃO remove o prefixo, mantém o path original
+        configure: (proxy, _options) => {
+          proxy.on('error', (err, _req, _res) => {
+            console.log('moblix-api proxy error', err);
+          });
+          proxy.on('proxyReq', (proxyReq, req, _res) => {
+            proxyReq.setHeader('Origin', 'externo');
+            console.log('Moblix-API Request:', req.method, req.url);
+          });
+          proxy.on('proxyRes', (proxyRes, req, _res) => {
+            console.log('Moblix-API Response:', proxyRes.statusCode, req.url);
           });
         }
       }
