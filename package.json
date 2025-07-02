@@ -8,7 +8,8 @@
     "dev": "vite --config vite.config.cjs",
     "build": "vite build --config vite.config.cjs",
     "preview": "vite preview --config vite.config.cjs",
-    "serve": "vite preview --config vite.config.cjs"
+    "serve": "vite preview --config vite.config.cjs",
+    "setup-db": "node setup-database.js"
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.0",
@@ -20,6 +21,8 @@
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
+    "node-fetch": "^3.3.2",
+    "pg": "^8.16.3",
     "pinia": "^2.1.7",
     "uuid": "^11.1.0",
     "vue": "^3.4.0",

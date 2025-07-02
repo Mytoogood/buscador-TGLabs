@@ -6,7 +6,7 @@
         <div class="flex justify-between items-center h-16">
           <div class="flex items-center">
             <h1 class="text-xl font-semibold text-gray-900">
-              Ofertas de Voos - Moblix API
+              Ofertas de Voos - Júlio Martins API
             </h1>
           </div>
           <div class="space-x-2">

@@ -26,7 +26,7 @@
 
       <div v-if="isLoading" class="flex items-center space-x-2 text-accent-light">
         <div class="animate-spin rounded-full h-5 w-5 border-t-2 border-b-2 border-accent-light"></div>
-        <span>Conectando à API Moblix...</span>
+        <span>Conectando à API Júlio Martins...</span>
       </div>
 
       <div v-else-if="error" class="bg-red-900/30 border-l-4 border-red-500 p-4">
@@ -54,7 +54,7 @@
             </div>
             <div class="ml-3">
               <p class="text-sm text-green-300">
-                Conexão com a API Moblix estabelecida com sucesso!
+                Conexão com a API Júlio Martins estabelecida com sucesso!
               </p>
             </div>
           </div>
@@ -158,7 +158,7 @@ export default {
       apiData.value = null;
       
       try {
-        console.log('Iniciando teste de autenticação com a API Moblix...');
+        console.log('Iniciando teste de autenticação com a API Júlio Martins...');
         
         // Usando o novo serviço de autenticação Moblix
         console.log('Iniciando autenticação com moblixAuth...');
@@ -186,7 +186,7 @@ export default {
           }
           
           apiData.value = { 
-            message: 'Conexão com API Moblix estabelecida com sucesso!',
+            message: 'Conexão com API Júlio Martins estabelecida com sucesso!',
             status: 'Conectado',
             token_type: authResult.tokenType,
             expires_in: `${Math.floor(authResult.expiresIn / 3600)} horas`,
@@ -197,10 +197,10 @@ export default {
           
           return true;
         } else {
-          throw new Error('Falha na autenticação com a API Moblix');
+          throw new Error('Falha na autenticação com a API Júlio Martins');
         }
       } catch (err) {
-        console.error('Erro ao conectar com a API Moblix:', err);
+        console.error('Erro ao conectar com a API Júlio Martins:', err);
         
         if (err.code === 'ECONNABORTED') {
           error.value = 'A requisição demorou muito. Verifique sua conexão e tente novamente.';

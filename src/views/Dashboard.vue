@@ -1,12 +1,12 @@
 <template>
   <div class="dashboard min-h-screen bg-gray-50">
     <!-- Header -->
-    <header class="bg-white shadow-sm border-b border-gray-200">
+    <header class="bg-white shadow-sm">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
           <div class="flex items-center">
             <h1 class="text-xl font-semibold text-gray-900">
-              Painel Moblix - {{ userProfile?.name || 'Agência' }}
+              Painel Júlio Martins - {{ userProfile?.name || 'Agência' }}
             </h1>
           </div>
           <div class="flex items-center space-x-4">
@@ -43,7 +43,7 @@
               <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
-              Painel de Controle Moblix
+              Painel de Controle Júlio Martins
             </h2>
             <p class="text-blue-100 text-lg">
               Gerencie suas milhas, cotações e clientes em um só lugar
@@ -93,7 +93,7 @@
       <!-- Cards de Resumo -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         <!-- Saldo Total -->
-        <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-blue-500">
+        <div class="bg-white rounded-xl shadow-sm p-6">
           <div class="flex items-center justify-between">
             <div>
               <p class="text-sm font-medium text-gray-500">Saldo Total</p>
@@ -116,7 +116,7 @@
         </div>
 
         <!-- Clientes Ativos -->
-        <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-green-500">
+        <div class="bg-white rounded-xl shadow-sm p-6">
           <div class="flex items-center justify-between">
             <div>
               <p class="text-sm font-medium text-gray-500">Clientes Ativos</p>
@@ -139,7 +139,7 @@
         </div>
 
         <!-- Transações (30 dias) -->
-        <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-purple-500">
+        <div class="bg-white rounded-xl shadow-sm p-6">
           <div class="flex items-center justify-between">
             <div>
               <p class="text-sm font-medium text-gray-500">Transações (30d)</p>
@@ -162,7 +162,7 @@
         </div>
 
         <!-- Valor Médio por Transação -->
-        <div class="bg-white rounded-xl shadow-sm p-6 border-l-4 border-yellow-500">
+        <div class="bg-white rounded-xl shadow-sm p-6">
           <div class="flex items-center justify-between">
             <div>
               <p class="text-sm font-medium text-gray-500">Ticket Médio</p>

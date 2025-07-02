@@ -61,13 +61,13 @@
               </router-link>
             </li>
             <li>
-              <a 
-                href="#" 
+              <router-link 
+                to="/treinamentos" 
                 class="flex items-center text-accent-light/80 hover:text-secondary-400 transition-colors duration-300 group"
               >
                 <span class="w-1.5 h-1.5 bg-secondary-500 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                 <span>Treinamentos</span>
-              </a>
+              </router-link>
             </li>
             <li>
               <a 

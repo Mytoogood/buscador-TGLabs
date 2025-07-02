@@ -353,9 +353,30 @@ const login = async function(email, password, rememberMe = false) {
     
     if (error) {
       console.error('[AuthService] Erro no login:', error)
+      
+      // Tratamento específico para email não confirmado
+      if (error.message.includes('Email not confirmed')) {
+        return { 
+          success: false, 
+          error: 'Por favor, confirme seu email antes de fazer login. Verifique sua caixa de entrada e spam.',
+          user: null,
+          session: null
+        }
+      }
+      
+      // Tratamento para credenciais inválidas
+      if (error.message.includes('Invalid login credentials')) {
+        return { 
+          success: false, 
+          error: 'Email ou senha incorretos',
+          user: null,
+          session: null
+        }
+      }
+      
       return { 
         success: false, 
-        error: error,
+        error: error.message || 'Erro ao fazer login',
         user: null,
         session: null
       }
@@ -443,6 +464,8 @@ const login = async function(email, password, rememberMe = false) {
 const register = async function(userData) {
   const supabase = getClient()
   try {
+    console.log('[AuthService] Iniciando processo de registro para:', userData.email)
+    
     // Create auth user
     const { data: authData, error: authError } = await supabase.auth.signUp({
       email: userData.email,
@@ -455,25 +478,96 @@ const register = async function(userData) {
       },
     })
 
-    if (authError) throw authError
+    if (authError) {
+      console.error('[AuthService] Erro no signUp:', authError)
+      
+      // Tratamento específico para diferentes tipos de erro
+      if (authError.message.includes('already registered') || authError.message.includes('User already registered')) {
+        console.log('[AuthService] Email já registrado no sistema de autenticação')
+        return { 
+          success: false, 
+          error: 'Este email já está em uso. Por favor, use outro email ou faça login se já possui uma conta.' 
+        }
+      }
+      
+      // Rate limit - permitir múltiplos cadastros ignorando este erro específico
+      if (authError.message.includes('you can only request this after')) {
+        console.log('[AuthService] Rate limit detectado, ignorando e continuando processo')
+        // Não retorna erro, continua o fluxo normal
+      } else {
+        // Para outros erros, retornar a mensagem original
+        return { 
+          success: false, 
+          error: authError.message || 'Erro ao criar conta. Tente novamente.' 
+        }
+      }
+    }
+    
+    console.log('[AuthService] SignUp bem-sucedido, dados:', authData)
 
     if (authData?.user) {
-      // Create profile in profiles table
-      const { data: profileData, error: profileError } = await supabase
+      // Verificar se o perfil já existe
+      const { data: existingProfile } = await supabase
         .from('profiles')
-        .insert([
-          {
-            id: authData.user.id,
-            name: userData.name,
-            email: userData.email,
-            phone: userData.phone,
-            created_at: new Date().toISOString(),
-          },
-        ])
-        .select()
+        .select('*')
+        .eq('id', authData.user.id)
         .single()
+      
+      let profileData = existingProfile
+      let profileError = null
+      
+      if (!existingProfile) {
+        // Create profile in profiles table apenas se não existir
+        const { data: newProfileData, error: insertError } = await supabase
+          .from('profiles')
+          .insert([
+            {
+              id: authData.user.id,
+              name: userData.name,
+              email: userData.email,
+              phone: userData.phone,
+              created_at: new Date().toISOString(),
+            },
+          ])
+          .select()
+          .single()
+        
+        profileData = newProfileData
+        profileError = insertError
+      } else {
+        console.log('[AuthService] Perfil já existe para este usuário, usando dados existentes')
+      }
 
-      if (profileError) throw profileError
+      if (profileError) {
+        console.error('[AuthService] Erro ao criar perfil:', profileError)
+        console.error('[AuthService] Código do erro:', profileError.code)
+        console.error('[AuthService] Mensagem do erro:', profileError.message)
+        console.error('[AuthService] Detalhes do erro:', profileError.details)
+        
+        // Se o erro for de ID duplicado (usuário já existe), avisar
+        if (profileError.code === '23505' || profileError.message.includes('duplicate key')) {
+          console.log('[AuthService] Perfil duplicado detectado')
+          return { 
+            success: false, 
+            error: 'Este email já está em uso. Por favor, use outro email ou faça login se já possui uma conta.' 
+          }
+        }
+        
+        // Para outros tipos de erro específicos
+        if (profileError.message.includes('violates row-level security policy')) {
+          console.log('[AuthService] Erro de política RLS')
+          return { 
+            success: false, 
+            error: 'Erro de permissão. Entre em contato com o suporte.' 
+          }
+        }
+        
+        // Para outros erros de perfil, retornar erro específico
+        return { 
+          success: false, 
+          error: `Erro ao criar perfil: ${profileError.message || 'Erro desconhecido'}` 
+        }
+      }
 
       return { 
         success: true, 

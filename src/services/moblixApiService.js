@@ -165,7 +165,7 @@ const moblixApiService = {
    * @param {number} [params.adultos=1] Número de passageiros adultos
    * @param {number} [params.criancas=0] Número de crianças
    * @param {number} [params.bebes=0] Número de bebês
-   * @param {number} [params.companhia=-1] ID da companhia aérea (-1 para todas)
+   * @param {number} [params.companhia=1] ID da companhia aérea (1=Latam, 2=Gol, 3=Azul, 11=TAP, 34=Livelo, 1200=Azul Interline)
    * @param {boolean} [params.internacional=false] Se é um voo internacional
    * @param {boolean} [params.soIda=false] Se é apenas ida
    * @param {number} [params.numeroPagina=1] Número da página para resultados paginados
@@ -179,25 +179,23 @@ const moblixApiService = {
       throw new Error('Origem, destino e data de ida são obrigatórios');
     }
 
-    // Formata os parâmetros para a API
+    // Formata os parâmetros para a API - formato simplificado conforme documentação
     const requestData = {
       Origem: params.origem.toUpperCase(),
       Destino: params.destino.toUpperCase(),
       Ida: params.ida,
-      Volta: params.volta || '0001-01-01', // Formato para indicar sem volta
       Adultos: params.adultos || 1,
       Criancas: params.criancas || 0,
       Bebes: params.bebes || 0,
-      Companhia: params.companhia || -1,
-      Internacional: params.internacional || false,
-      SoIda: params.soIda || false,
-      NumeroPagina: params.numeroPagina || 1,
-      QuantidadePorPagina: params.quantidadePorPagina || 10,
-      OrderBy: params.orderBy || 'tempo'
+      Companhia: params.companhia || 1 // Default para Latam
     };
 
-    // Remove campos undefined
-    Object.keys(requestData).forEach(key => requestData[key] === undefined && delete requestData[key]);
+    // Adiciona volta apenas se fornecida
+    if (params.volta && params.volta !== '0001-01-01') {
+      requestData.Volta = params.volta;
+    }
+
+    console.log('📡 Enviando requisição para API Moblix:', requestData);
 
     // Faz a requisição para a API
     return this.request({

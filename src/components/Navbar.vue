@@ -409,22 +409,28 @@ export default {
         isRoute: true
       },
       {
-        name: 'Sobre',
-        path: '/sobre',
+        name: 'Consultoria',
+        path: '/consultoria',
         icon: UserIcon,
         isRoute: true
       },
       {
-        name: 'Hotéis',
-        path: '/hotels',
-        icon: BuildingOfficeIcon, // Usando HomeIcon temporariamente
+        name: 'Treinamentos',
+        path: '/treinamentos',
+        icon: ShieldCheckIcon,
         isRoute: true
       },
       {
-        name: 'Consultoria',
-        path: 'https://api.whatsapp.com/message/JWDP3GJGOFWAB1?autoload=1&app_absent=0',
+        name: 'Grupo Exclusivo',
+        path: '/grupo-exclusivo',
+        icon: BuildingOfficeIcon,
+        isRoute: true
+      },
+      {
+        name: 'Fale Comigo',
+        path: '/fale-comigo',
         icon: PhoneIcon,
-        isRoute: false
+        isRoute: true
       }
     ]
 
@@ -673,12 +679,6 @@ export default {
   visibility: hidden;
   transform: translateY(10px);
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.group:hover .user-dropdown {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
 }
 
 /* Efeito de gradiente animado para o texto */

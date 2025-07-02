@@ -1,189 +1,107 @@
 <template>
-  <div class="min-h-screen bg-gray-50">
-    <!-- Header -->
-    <header class="bg-white shadow-sm border-b border-gray-200">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-          <div class="flex items-center">
-            <h1 class="text-xl font-semibold text-gray-900">
-              Painel de Controle - Moblix & Booking
-            </h1>
+<div class="min-h-screen bg-gradient-to-br from-primary-600 via-primary-700 to-secondary-600">
+    <!-- Header Elegante -->
+<header class="bg-primary-900/80 backdrop-blur-md shadow-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div class="flex justify-between items-center h-20">
+          <div class="flex items-center space-x-4">
+            <div class="w-12 h-12 bg-gradient-to-br from-secondary-500 to-secondary-700 rounded-xl flex items-center justify-center shadow-lg">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+              </svg>
+            </div>
+            <div>
+              <h1 class="text-3xl font-bold text-white">
+                ✈️ Portal de Voos - Júlio Martins
+              </h1>
+              <p class="text-sm text-accent-light">Busca e reserva de passagens aéreas</p>
+            </div>
           </div>
           <div class="flex items-center space-x-4">
-            <span class="text-sm text-gray-600">
-              Olá, <strong>{{ userProfile?.name || 'Usuário' }}</strong>
-            </span>
+            <div class="text-right mr-4">
+              <p class="text-sm font-medium text-white">Olá, {{ userProfile?.name || 'Usuário' }}!</p>
+              <p class="text-xs text-accent-light">Portal de Voos</p>
+            </div>
             <button
               @click="handleLogout"
-              class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
+              class="inline-flex items-center px-4 py-2 text-sm font-medium rounded-xl shadow-md text-red-700 bg-gradient-to-r from-red-50 to-pink-50 hover:from-red-100 hover:to-pink-100 transition-all duration-300 transform hover:scale-105"
             >
+              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+              </svg>
               Sair
             </button>
           </div>
         </div>
       </div>
-      <p class="text-gray-600 mt-2">Bem-vindo de volta, {{ userProfile?.full_name || 'Usuário' }}!</p>
     </header>
 
     <!-- Conteúdo Principal -->
-    <main>
+<main class="transition-all duration-300">
       <div v-if="isLoading" class="flex justify-center items-center h-64">
         <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
       </div>
 
       <div v-else>
-        <!-- Seção de Aplicações -->
-        <section class="mb-10">
-          <h2 class="text-xl font-semibold text-gray-700 mb-4">Aplicações</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Card Moblix -->
-            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-              <div class="flex items-center mb-4">
-                <div class="p-3 bg-blue-100 rounded-lg mr-4">
-                  <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+        <!-- Hero Section -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">
+              ✈️ Bem-vindo ao <span class="bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent font-extrabold">Portal de Voos</span>
+            </h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+              Encontre e reserve as melhores passagens aéreas com preços exclusivos
+            </p>
+          </div>
+          
+          <!-- Cards Principais -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <!-- Buscar Voos -->
+            <div class="bg-white/80 backdrop-blur-md rounded-2xl shadow-2xl p-8 hover:shadow-3xl transition-all duration-300 transform hover:scale-105">
+              <div class="flex items-center mb-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center mr-4">
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                   </svg>
                 </div>
-                <h3 class="text-lg font-medium">Moblix</h3>
+                <h3 class="text-2xl font-bold text-gray-900">Buscar Voos</h3>
               </div>
-              <p class="text-gray-600 mb-4">Acesse o dashboard do Moblix para gerenciar suas vendas e estoque.</p>
+              <p class="text-gray-600 mb-6 text-lg">Encontre as melhores opções de voos com preços competitivos e horários flexíveis.</p>
               <router-link 
-                to="/moblix"
-                class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center"
+                to="/flights"
+                class="inline-flex items-center px-6 py-3 text-base font-medium rounded-xl shadow-lg text-white bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 transition-all duration-300 transform hover:scale-105"
               >
-                Acessar Moblix
-                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
                 </svg>
+                Buscar Voos Agora
               </router-link>
             </div>
 
-            <!-- Card Booking.com -->
-            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-              <div class="flex items-center mb-4">
-                <div class="p-3 bg-green-100 rounded-lg mr-4">
-                  <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+            <!-- Ofertas Especiais -->
+            <div class="bg-white/80 backdrop-blur-md rounded-2xl shadow-2xl p-8 hover:shadow-3xl transition-all duration-300 transform hover:scale-105">
+              <div class="flex items-center mb-6">
+                <div class="w-16 h-16 bg-gradient-to-br from-amber-500 to-yellow-600 rounded-2xl flex items-center justify-center mr-4">
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
                   </svg>
                 </div>
-                <h3 class="text-lg font-medium">Booking.com</h3>
+                <h3 class="text-2xl font-bold text-gray-900">Ofertas Especiais</h3>
               </div>
-              <p class="text-gray-600 mb-4">Gerencie suas reservas e disponibilidade no Booking.com.</p>
+              <p class="text-gray-600 mb-6 text-lg">Confira nossas ofertas exclusivas e promoções imperdíveis para destinos nacionais e internacionais.</p>
               <router-link 
-                to="/booking"
-                class="text-green-600 hover:text-green-800 font-medium inline-flex items-center"
+                to="/ofertas"
+                class="inline-flex items-center px-6 py-3 text-base font-medium rounded-xl shadow-lg text-white bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-600 hover:to-yellow-700 transition-all duration-300 transform hover:scale-105"
               >
-                Acessar Booking.com
-                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
                 </svg>
-              </router-link>
-            </div>
-
-            <!-- Card Relatórios -->
-            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-              <div class="flex items-center mb-4">
-                <div class="p-3 bg-purple-100 rounded-lg mr-4">
-                  <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                  </svg>
-                </div>
-                <h3 class="text-lg font-medium">Relatórios</h3>
-              </div>
-              <p class="text-gray-600 mb-4">Acesse relatórios detalhados e análises dos seus dados.</p>
-              <router-link 
-                to="/relatorios"
-                class="text-purple-600 hover:text-purple-800 font-medium inline-flex items-center"
-              >
-                Ver Relatórios
-                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                </svg>
+                Ver Ofertas
               </router-link>
             </div>
           </div>
         </section>
 
-        <!-- Seção de Ferramentas Rápidas -->
-        <section>
-          <h2 class="text-xl font-semibold text-gray-700 mb-4">Ferramentas Rápidas</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Nova Extração -->
-            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-              <div class="flex items-center mb-4">
-                <div class="p-3 bg-yellow-100 rounded-lg mr-4">
-                  <svg class="w-8 h-8 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
-                  </svg>
-                </div>
-                <h3 class="text-lg font-medium">Nova Extração</h3>
-              </div>
-              <p class="text-gray-600 mb-4">Inicie uma nova extração de dados das plataformas integradas.</p>
-              <button 
-                @click="startNewExtraction"
-                :disabled="isExtracting"
-                class="bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-yellow-600 transition-colors flex items-center"
-                :class="{
-                  'opacity-50 cursor-not-allowed': isExtracting,
-                  'hover:bg-yellow-500': isExtracting
-                }"
-              >
-                <span v-if="isExtracting" class="inline-block mr-2">
-                  <svg class="animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                  </svg>
-                </span>
-                <span>{{ isExtracting ? 'Processando...' : 'Iniciar Extração' }}</span>
-              </button>
-            </div>
-
-            <!-- Configurações -->
-            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-              <div class="flex items-center mb-4">
-                <div class="p-3 bg-gray-100 rounded-lg mr-4">
-                  <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                  </svg>
-                </div>
-                <h3 class="text-lg font-medium">Configurações</h3>
-              </div>
-              <p class="text-gray-600 mb-4">Configure as preferências da sua conta e notificações.</p>
-              <router-link 
-                to="/configuracoes"
-                class="text-gray-700 hover:text-gray-900 font-medium inline-flex items-center"
-              >
-                Acessar Configurações
-                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                </svg>
-              </router-link>
-            </div>
-
-            <!-- Suporte -->
-            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-              <div class="flex items-center mb-4">
-                <div class="p-3 bg-red-100 rounded-lg mr-4">
-                  <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zM12 13a1 1 0 100-2 1 1 0 000 2z"></path>
-                  </svg>
-                </div>
-                <h3 class="text-lg font-medium">Suporte</h3>
-              </div>
-              <p class="text-gray-600 mb-4">Precisa de ajuda? Entre em contato com nossa equipe de suporte.</p>
-              <button 
-                @click="openSupport"
-                class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors flex items-center"
-              >
-                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
-                </svg>
-                Falar com Suporte
-              </button>
-            </div>
-          </div>
-        </section>
       </div>
     </main>
   </div>

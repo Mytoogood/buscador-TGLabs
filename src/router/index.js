@@ -10,6 +10,9 @@ import AreaLogada from '@/views/AreaLogada.vue'
 import Testimonials from '@/views/Testimonials.vue'
 import TestPage from '@/views/TestPage.vue'
 import MoblixExplorer from '@/views/MoblixExplorer.vue'
+import FaleComigo from '@/views/FaleComigo.vue'
+import AlertasImperdiveis from '@/views/AlertasImperdiveis.vue'
+import Treinamentos from '@/views/Treinamentos.vue'
 import authService from '@/services/authService.js'
 import { getSupabase } from '@/config/supabase'
 
@@ -150,6 +153,55 @@ const routes = [
     component: BookingManagement,
     meta: {
       title: 'My Bookings - Moblix',
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/fale-comigo',
+    name: 'FaleComigo',
+    component: FaleComigo,
+    meta: {
+      title: 'Fale Comigo - Júlio Martins | Milhas & Viagens'
+    }
+  },
+  {
+    path: '/alertas-imperdiveis',
+    name: 'AlertasImperdiveis',
+    component: AlertasImperdiveis,
+    meta: {
+      title: 'Alertas Imperdíveis - Júlio Martins | Milhas & Viagens'
+    }
+  },
+  {
+    path: '/treinamentos',
+    name: 'Treinamentos',
+    component: Treinamentos,
+    meta: {
+      title: 'Treinamentos - Júlio Martins | Milhas & Viagens'
+    }
+  },
+  {
+    path: '/consultoria',
+    name: 'Consultoria',
+    component: () => import('@/views/Consultoria.vue'),
+    meta: {
+      title: 'Consultoria - Júlio Martins | Milhas & Viagens'
+    }
+  },
+  {
+    path: '/grupo-exclusivo',
+    name: 'GrupoExclusivo',
+    component: () => import('@/views/GrupoExclusivo.vue'),
+    meta: {
+      title: 'Grupo Exclusivo - Júlio Martins | Milhas & Viagens'
+    }
+  },
+  {
+    path: '/dashboard/clients/new',
+    name: 'AddClient',
+    component: () => import('@/views/AddClient.vue'),
+    meta: {
+      title: 'Adicionar Cliente - Júlio Martins | Milhas & Viagens',
       requiresAuth: true
     }
   },
