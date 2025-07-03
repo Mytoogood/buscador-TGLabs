@@ -53,6 +53,7 @@ const moblixApiService = {
       });
 
       const response = await axios(requestConfig);
+      console.log('Resposta da API Moblix:', response.data);
       return response.data;
     } catch (error) {
       console.error('Erro na requisição para a API Moblix:', {
@@ -68,7 +69,6 @@ const moblixApiService = {
           console.log('Token expirado, tentando renovar...');
           await auth.logout();
           await auth.login();
-          
           // Repete a requisição original com o novo token
           return this.request({
             ...config,
@@ -89,6 +89,11 @@ const moblixApiService = {
         const errorMessage = apiError.Message || 'Erro na API';
         const errorDetails = apiError.InnerException?.Message || apiError.StackTraceString || '';
         throw new Error(`${errorMessage} ${errorDetails}`.trim());
+      }
+
+      // Tratamento amigável para erro de nenhum voo encontrado
+      if (error.response?.data?.Data && Array.isArray(error.response.data.Data) && error.response.data.Data.length === 0) {
+        throw new Error('Nenhum voo encontrado para os parâmetros informados');
       }
 
       throw error;
@@ -197,16 +202,26 @@ const moblixApiService = {
 
     console.log('📡 Enviando requisição para API Moblix:', requestData);
 
-    // Faz a requisição para a API
-    return this.request({
-      method: 'post',
-      endpoint: '/api/ConsultaAereo/Consultar',
-      data: requestData,
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
+    try {
+      const result = await this.request({
+        method: 'post',
+        endpoint: '/api/ConsultaAereo/Consultar',
+        data: requestData,
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        }
+      });
+      console.log('Resultado da busca de voos:', result);
+      return result;
+    } catch (error) {
+      console.error('Erro ao buscar voos:', error.message);
+      if (error.message.includes('Nenhum voo encontrado')) {
+        // Retorne um objeto padrão para facilitar o tratamento no frontend
+        return { Data: [], Mensagem: 'Nenhum voo encontrado para os parâmetros informados' };
       }
-    });
+      throw error;
+    }
   },
 
   /**

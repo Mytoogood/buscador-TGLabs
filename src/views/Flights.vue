@@ -6,13 +6,17 @@
         <div class="flex justify-between items-center h-20">
           <div class="flex items-center space-x-4">
             <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center shadow-lg">
-              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+              <!-- Ícone de avião SVG grande e bonito -->
+              <svg class="w-8 h-8 text-white drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M2.5 19.5l19-7a1 1 0 0 0 0-1.9l-19-7A1 1 0 0 0 1 4.6v3.4a1 1 0 0 0 .7.96l12.3 3.04-12.3 3.04A1 1 0 0 0 1 16v3.4a1 1 0 0 0 1.5.9z"/>
               </svg>
             </div>
             <div>
-              <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent">
-                ✈️ Busca de Voos
+              <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent flex items-center gap-2">
+                <svg class="w-6 h-6 text-blue-700 inline-block -mt-1" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M2.5 19.5l19-7a1 1 0 0 0 0-1.9l-19-7A1 1 0 0 0 1 4.6v3.4a1 1 0 0 0 .7.96l12.3 3.04-12.3 3.04A1 1 0 0 0 1 16v3.4a1 1 0 0 0 1.5.9z"/>
+                </svg>
+                Busca de Voos
               </h1>
               <p class="text-sm text-gray-600">Powered by Moblix API</p>
             </div>
@@ -44,8 +48,11 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <!-- Hero Section -->
       <div class="text-center mb-12">
-        <h1 class="text-4xl font-bold text-gray-900 mb-4">
-          ✈️ Encontre os <span class="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">Melhores Voos</span>
+        <h1 class="text-4xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-2">
+          <svg class="w-8 h-8 text-blue-700 inline-block -mt-1" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M2.5 19.5l19-7a1 1 0 0 0 0-1.9l-19-7A1 1 0 0 0 1 4.6v3.4a1 1 0 0 0 .7.96l12.3 3.04-12.3 3.04A1 1 0 0 0 1 16v3.4a1 1 0 0 0 1.5.9z"/>
+          </svg>
+          Encontre os <span class="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">Melhores Voos</span>
         </h1>
         <p class="text-xl text-gray-600 max-w-2xl mx-auto">
           Busque e compare as melhores opções de voos com preços exclusivos para sua próxima viagem
@@ -413,6 +420,7 @@
                 <option value="3">Azul</option>
                 <option value="11">TAP</option>
                 <option value="34">Livelo</option>
+                <option value="1200">Azul Interline</option>
               </select>
             </div>
 
@@ -504,34 +512,71 @@
               <!-- Detalhes do voo de ida -->
               <div class="mt-4 border-t border-gray-200 pt-4">
                 <h4 class="text-sm font-medium text-gray-900 mb-2">Ida</h4>
-                <div v-for="(segment, segIndex) in flight.segments" :key="'outbound-' + segIndex" class="mt-2">
+                <div v-if="flight.segments && flight.segments.length > 0" v-for="(segment, segIndex) in flight.segments" :key="'outbound-' + segIndex" class="mt-2">
                   <div class="flex items-center">
                     <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center">
                       <svg class="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
                       </svg>
                     </div>
-                    <div class="ml-4">
+                    <div class="ml-4 flex-1">
                       <div class="flex items-center">
                         <span class="text-sm font-medium text-gray-900">
-                          {{ formatTime(segment.departureDate) }}
+                          {{ formatTime(segment.departureDate) || segment.horarioSaida || 'N/A' }}
                         </span>
                         <span class="mx-2 text-gray-400">→</span>
                         <span class="text-sm font-medium text-gray-900">
-                          {{ formatTime(segment.arrivalDate) }}
+                          {{ formatTime(segment.arrivalDate) || segment.horarioChegada || 'N/A' }}
                         </span>
                         <span class="ml-2 text-xs text-gray-500">
-                          ({{ formatDuration(segment.duration) }})
+                          ({{ formatDuration(segment.duration) || segment.duracao || 'N/A' }})
                         </span>
                       </div>
                       <div class="mt-1 text-sm text-gray-500">
-                        {{ segment.departure }} → {{ segment.arrival }}
-                        <span v-if="segment.numberOfStops > 0" class="text-xs text-yellow-600 ml-1">
-                          ({{ segment.numberOfStops }} escala{{ segment.numberOfStops > 1 ? 's' : '' }})
+                        {{ segment.departure || segment.origem || 'N/A' }} → {{ segment.arrival || segment.destino || 'N/A' }}
+                        <span v-if="segment.numberOfStops > 0 || segment.escalas > 0" class="text-xs text-yellow-600 ml-1">
+                          ({{ segment.numberOfStops || segment.escalas || 0 }} escala{{ (segment.numberOfStops || segment.escalas || 0) > 1 ? 's' : '' }})
                         </span>
                       </div>
-                      <div class="mt-1 text-xs text-gray-400">
-                        {{ segment.legs && segment.legs[0] && segment.legs[0].operatedBy ? segment.legs[0].operatedBy.name : 'N/A' }} {{ segment.legs && segment.legs[0] ? segment.legs[0].flightNumber : '' }}
+                    </div>
+                    <div class="ml-4 text-right">
+                      <div class="text-lg font-bold text-blue-900">
+                        {{ segment.legs && segment.legs[0] && segment.legs[0].operatedBy ? segment.legs[0].operatedBy.name : (segment.companhia || flight.companhia || 'N/A') }} {{ segment.legs && segment.legs[0] ? segment.legs[0].flightNumber : (segment.numeroVoo || flight.numeroVoo || '') }}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Fallback para dados simulados -->
+                <div v-else class="mt-2">
+                  <div class="flex items-center">
+                    <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center">
+                      <svg class="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                      </svg>
+                    </div>
+                    <div class="ml-4 flex-1">
+                      <div class="flex items-center">
+                        <span class="text-sm font-medium text-gray-900">
+                          {{ flight.horarioSaida || 'N/A' }}
+                        </span>
+                        <span class="mx-2 text-gray-400">→</span>
+                        <span class="text-sm font-medium text-gray-900">
+                          {{ flight.horarioChegada || 'N/A' }}
+                        </span>
+                        <span class="ml-2 text-xs text-gray-500">
+                          ({{ flight.duracao || 'N/A' }})
+                        </span>
+                      </div>
+                      <div class="mt-1 text-sm text-gray-500">
+                        {{ flight.origem || searchParams.origem }} → {{ flight.destino || searchParams.destino }}
+                        <span v-if="flight.escalas > 0" class="text-xs text-yellow-600 ml-1">
+                          ({{ flight.escalas }} escala{{ flight.escalas > 1 ? 's' : '' }})
+                        </span>
+                      </div>
+                    </div>
+                    <div class="ml-4 text-right">
+                      <div class="text-lg font-bold text-blue-900">
+                        {{ flight.companhia || 'N/A' }} {{ flight.numeroVoo || '' }}
                       </div>
                     </div>
                   </div>
@@ -548,7 +593,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
                       </svg>
                     </div>
-                    <div class="ml-4">
+                    <div class="ml-4 flex-1">
                       <div class="flex items-center">
                         <span class="text-sm font-medium text-gray-900">
                           {{ formatTime(segment.departureDate) }}
@@ -567,7 +612,9 @@
                           ({{ segment.numberOfStops }} escala{{ segment.numberOfStops > 1 ? 's' : '' }})
                         </span>
                       </div>
-                      <div class="mt-1 text-xs text-gray-400">
+                    </div>
+                    <div class="ml-4 text-right">
+                      <div class="text-lg font-bold text-gray-900">
                         {{ segment.legs && segment.legs[0] && segment.legs[0].operatedBy ? segment.legs[0].operatedBy.name : 'N/A' }} {{ segment.legs && segment.legs[0] ? segment.legs[0].flightNumber : '' }}
                       </div>
                     </div>
@@ -681,6 +728,29 @@ export default {
         isLoading.value = true;
         searchResults.value = null;
         
+        // Usar os parâmetros do usuário, não forçados
+        const formatDate = (dateString) => {
+          if (!dateString) return null;
+          const date = new Date(dateString);
+          return date.toISOString().split('T')[0]; // Formato YYYY-MM-DD
+        };
+        const params = {
+          origem: searchParams.value.origem.toUpperCase().trim(),
+          destino: searchParams.value.destino.toUpperCase().trim(),
+          ida: formatDate(searchParams.value.ida),
+          volta: searchParams.value.volta ? formatDate(searchParams.value.volta) : null,
+          adultos: parseInt(searchParams.value.adultos) || 1,
+          criancas: parseInt(searchParams.value.criancas) || 0,
+          bebes: parseInt(searchParams.value.bebes) || 0,
+          companhia: parseInt(searchParams.value.companhia) || -1,
+          soIda: Boolean(searchParams.value.soIda),
+          orderBy: searchParams.value.orderBy || 'tempo',
+          numeroPagina: parseInt(searchParams.value.numeroPagina) || 1,
+          quantidadePorPagina: parseInt(searchParams.value.quantidadePorPagina) || 100
+        };
+        console.log('Parâmetros da busca padrão:', params);
+        let response = await moblixApiService.consultarVoos(params);
+        
         // Validação básica
         if (!searchParams.value.origem || !searchParams.value.destino) {
           throw new Error('Por favor, preencha a origem e o destino');
@@ -692,79 +762,125 @@ export default {
           throw new Error('Por favor, selecione uma data de ida');
         }
         
-        let response;
+      
         
         if (searchType.value === 'padrao') {
           // Busca padrão
-          const params = { 
-            origem: searchParams.value.origem.toUpperCase(),
-            destino: searchParams.value.destino.toUpperCase(),
-            ida: searchParams.value.ida,
-            volta: searchParams.value.volta || null,
-            adultos: searchParams.value.adultos || 1,
-            criancas: searchParams.value.criancas || 0,
-            bebes: searchParams.value.bebes || 0,
-            companhia: searchParams.value.companhia || -1,
-            soIda: searchParams.value.soIda || false,
-            orderBy: searchParams.value.orderBy || 'tempo',
-            numeroPagina: searchParams.value.numeroPagina || 1,
-            quantidadePorPagina: searchParams.value.quantidadePorPagina || 100
+                    // Validação dos parâmetros antes de enviar
+          if (!searchParams.value.origem || !searchParams.value.destino || !searchParams.value.ida) {
+            throw new Error('Origem, destino e data de ida são obrigatórios');
+          }
+          
+          // Formata a data de ida para o formato esperado pela API
+          const formatDate = (dateString) => {
+            if (!dateString) return null;
+            const date = new Date(dateString);
+            return date.toISOString().split('T')[0]; // Formato YYYY-MM-DD
           };
+          
+          const params = {
+            origem: searchParams.value.origem.toUpperCase().trim(),
+            destino: searchParams.value.destino.toUpperCase().trim(),
+            ida: formatDate(searchParams.value.ida),
+            volta: searchParams.value.volta ? formatDate(searchParams.value.volta) : null,
+            adultos: parseInt(searchParams.value.adultos) || 1,
+            criancas: parseInt(searchParams.value.criancas) || 0,
+            bebes: parseInt(searchParams.value.bebes) || 0,
+            companhia: parseInt(searchParams.value.companhia) || -1,
+            soIda: Boolean(searchParams.value.soIda),
+            orderBy: searchParams.value.orderBy || 'tempo',
+            numeroPagina: parseInt(searchParams.value.numeroPagina) || 1,
+            quantidadePorPagina: parseInt(searchParams.value.quantidadePorPagina) || 100
+          };
+          
+          // Validação adicional
+          if (params.origem === params.destino) {
+            throw new Error('Origem e destino não podem ser iguais');
+          }
+          
+          if (params.ida < new Date().toISOString().split('T')[0]) {
+            throw new Error('A data de ida não pode ser anterior a hoje');
+          }
+          
+          if (params.volta && params.volta < params.ida) {
+            throw new Error('A data de volta não pode ser anterior à data de ida');
+          }
           
           console.log('Parâmetros da busca padrão:', params);
           response = await moblixApiService.consultarVoos(params);
           
-          // Processa diferentes formatos de resposta da API Moblix
+          // Processa a resposta da API Moblix no formato real
           let rawFlights = [];
           
-          if (Array.isArray(response)) {
-            rawFlights = response;
-          } else if (response?.Data && Array.isArray(response.Data) && response.Data.length > 0) {
-            // Formato específico da API Moblix: response.Data[0].flights
+          console.log('=== ANÁLISE DA RESPOSTA DA API MOBLIX ===');
+          console.log('Tipo da resposta:', typeof response);
+          console.log('É array?', Array.isArray(response));
+          console.log('Propriedades da resposta:', response ? Object.keys(response) : 'null');
+          
+          // Formato real da API Moblix: response.Data[0].flights contém os voos
+          if (response?.Data && Array.isArray(response.Data) && response.Data.length > 0) {
             const firstDataItem = response.Data[0];
             if (firstDataItem?.flights && Array.isArray(firstDataItem.flights)) {
               rawFlights = firstDataItem.flights;
+              console.log('✅ Usando voos de response.Data[0].flights:', rawFlights.length, 'voos encontrados');
             } else {
               rawFlights = response.Data;
+              console.log('✅ Usando Data da resposta:', rawFlights.length, 'voos');
             }
-          } else if (response?.flights && Array.isArray(response.flights)) {
-            rawFlights = response.flights;
-          } else if (response?.result && Array.isArray(response.result)) {
-            rawFlights = response.result;
-          } else if (response?.Response && Array.isArray(response.Response)) {
-            rawFlights = response.Response;
-          } else if (response && typeof response === 'object' && !Array.isArray(response)) {
-            // Se a resposta é um objeto, pode conter os voos em alguma propriedade
-            const possibleArrays = Object.values(response).filter(val => Array.isArray(val));
-            if (possibleArrays.length > 0) {
-              rawFlights = possibleArrays[0];
-            }
+          } else if (response?.Ida && Array.isArray(response.Ida)) {
+            rawFlights = response.Ida;
+            console.log('✅ Usando voos da propriedade Ida:', rawFlights.length, 'voos encontrados');
+          } else if (Array.isArray(response)) {
+            rawFlights = response;
+            console.log('✅ Resposta é um array direto:', rawFlights.length, 'voos');
+          } else {
+            console.log('❌ Nenhum formato de voos reconhecido na resposta');
+            console.log('Resposta completa:', JSON.stringify(response, null, 2));
           }
           
-          console.log('=== VOOS EXTRAÍDOS PARA NORMALIZAÇÃO ===');
-          console.log('Quantidade de voos:', rawFlights.length);
-          console.log('Todos os voos:', rawFlights);
+          console.log('=== FIM ANÁLISE DA RESPOSTA ===');
           
           if (rawFlights.length > 0) {
-            console.log('Primeiro voo detalhado:', rawFlights[0]);
+            console.log('=== PRIMEIRO VOO DETALHADO ===');
+            console.log('Primeiro voo:', JSON.stringify(rawFlights[0], null, 2));
             console.log('Propriedades do primeiro voo:', Object.keys(rawFlights[0] || {}));
-            
-            // Procura por propriedades de preço no primeiro voo
-            const firstFlight = rawFlights[0];
-            console.log('Procurando preços no primeiro voo:');
-            console.log('- priceWithTax:', firstFlight?.priceWithTax);
-            console.log('- price:', firstFlight?.price);
-            console.log('- totalPrice:', firstFlight?.totalPrice);
-            console.log('- Preco:', firstFlight?.Preco);
-            console.log('- PrecoTotal:', firstFlight?.PrecoTotal);
-            console.log('- ValorTotal:', firstFlight?.ValorTotal);
-            console.log('- Amount:', firstFlight?.Amount);
-            console.log('- fareGroup:', firstFlight?.fareGroup);
+            console.log('=== FIM PRIMEIRO VOO ===');
           }
-          console.log('=== FIM VOOS EXTRAÍDOS ===');
+          
+          // Processa a resposta da API para extrair os voos reais
+          let processedFlights = [];
+          
+          if (Array.isArray(rawFlights)) {
+            // Para cada voo na resposta, extrai os voos de ida e volta
+            rawFlights.forEach(flight => {
+              // Adiciona voos de ida se existirem
+              if (flight.Ida && Array.isArray(flight.Ida)) {
+                flight.Ida.forEach(idaFlight => {
+                  processedFlights.push({
+                    ...idaFlight,
+                    Companhia: flight.Companhia,
+                    TokenConsulta: flight.TokenConsulta
+                  });
+                });
+              }
+              
+              // Adiciona voos de volta se existirem
+              if (flight.Volta && Array.isArray(flight.Volta)) {
+                flight.Volta.forEach(voltaFlight => {
+                  processedFlights.push({
+                    ...voltaFlight,
+                    Companhia: flight.Companhia,
+                    TokenConsulta: flight.TokenConsulta
+                  });
+                });
+              }
+            });
+          }
+          
+          console.log('Voos processados:', processedFlights.length);
           
           // Normaliza a estrutura dos voos para o formato esperado pelo template
-          searchResults.value = rawFlights.map(flight => normalizeFlight(flight));
+          searchResults.value = processedFlights.map(flight => normalizeFlight(flight));
           
         } else {
           // Busca via Reserva Fácil
@@ -798,18 +914,26 @@ export default {
         // Imprime todas as propriedades do objeto resposta
         if (response && typeof response === 'object') {
           console.log('Propriedades da resposta:', Object.keys(response));
-          console.log('Valores das propriedades:', response);
+          console.log('Valores das propriedades:', JSON.stringify(response, null, 2));
           
           // Procura por arrays dentro da resposta
           Object.keys(response).forEach(key => {
             if (Array.isArray(response[key])) {
               console.log(`Propriedade "${key}" é um array com ${response[key].length} itens`);
               if (response[key].length > 0) {
-                console.log(`Primeiro item de "${key}":`, response[key][0]);
+                console.log(`Primeiro item de "${key}":`, JSON.stringify(response[key][0], null, 2));
               }
             }
           });
         }
+        
+        // Log adicional para debug
+        console.log('=== ANÁLISE DETALHADA ===');
+        console.log('searchResults.value antes da verificação:', searchResults.value);
+        console.log('Tipo de searchResults.value:', typeof searchResults.value);
+        console.log('É array?', Array.isArray(searchResults.value));
+        console.log('Comprimento:', searchResults.value?.length);
+        console.log('Valor booleano de verificação:', !searchResults.value || searchResults.value.length === 0);
         
         console.log('searchResults.value:', searchResults.value);
         console.log('Tipo de searchResults.value:', typeof searchResults.value);
@@ -824,28 +948,35 @@ export default {
         
         // Verifica se há resultados reais da API
         if (!searchResults.value || searchResults.value.length === 0) {
-          throw new Error('Nenhum voo encontrado para os parâmetros informados');
+          // Se não há voos, mostra mensagem amigável em vez de erro
+          toast.info('Nenhum voo encontrado para os parâmetros informados. Tente outras datas ou rotas.');
+          return; // Sai da função sem lançar erro
         }
         
         toast.success(`${searchResults.value.length} voos encontrados`);
-      } catch (error) {
-        console.error('Erro ao buscar voos:', error);
-        
-        // Log detalhado do erro para debug
-        console.error('Detalhes completos do erro:', {
-          message: error.message,
-          status: error.response?.status,
-          statusText: error.response?.statusText,
-          data: error.response?.data,
-          config: {
-            method: error.config?.method,
-            url: error.config?.url,
-            baseURL: error.config?.baseURL,
-            headers: error.config?.headers
-          },
-          code: error.code,
-          name: error.name
-        });
+              } catch (error) {
+          console.error('Erro ao buscar voos:', error);
+          
+          // Log detalhado do erro para debug
+          console.error('Detalhes completos do erro:', {
+            message: error.message,
+            status: error.response?.status,
+            statusText: error.response?.statusText,
+            data: error.response?.data,
+            config: {
+              method: error.config?.method,
+              url: error.config?.url,
+              baseURL: error.config?.baseURL,
+              headers: error.config?.headers
+            },
+            code: error.code,
+            name: error.name
+          });
+          
+          // Verifica se é um erro da API Moblix
+          if (error.response?.status === 500 && error.response?.data?.error_description?.includes('Object reference')) {
+            throw new Error('A API Moblix está temporariamente indisponível. Por favor, tente novamente em alguns minutos ou entre em contato com o suporte.');
+          }
         
         // Trata diferentes tipos de erro
         let errorMessage = 'Erro desconhecido';
@@ -872,8 +1003,15 @@ export default {
           // Erro de rede
           errorMessage = 'Erro de conexão. Verifique sua internet e tente novamente.';
         } else {
-          // Erro de configuração
-          errorMessage = error.message || 'Erro na configuração da requisição';
+          // Erro de configuração ou erro específico da API
+          const errorMsg = error.message || 'Erro na configuração da requisição';
+          
+          // Tratamento específico para erro de permissão da TAP
+          if (errorMsg.includes('permissão de pesquisa TAP') || errorMsg.includes('TAP')) {
+            errorMessage = 'A companhia TAP não está disponível no momento. Tente com outras companhias como Latam, Gol ou Azul.';
+          } else {
+            errorMessage = errorMsg;
+          }
         }
         
         toast.error(`Erro ao buscar voos: ${errorMessage}`);
@@ -1182,53 +1320,152 @@ export default {
         };
       }
       
-      // Extrai preços de diferentes formatos possíveis
+      console.log('Normalizando voo da API Moblix:', JSON.stringify(flight, null, 2));
+      console.log('Propriedades do voo:', Object.keys(flight));
+      
+      // Extrai preços do novo formato da API Moblix
       const extractPrice = (obj) => {
-        // Prioridade 1: fareGroup.priceWithTax (formato da API Moblix)
-        if (obj?.fareGroup) {
-          const { priceWithTax, price, totalPrice } = obj.fareGroup;
-          if (typeof priceWithTax === 'number') return priceWithTax;
-          if (typeof price === 'number') return price;
-          if (typeof totalPrice === 'number') return totalPrice;
+        // Formato específico da Azul - ValorTotalComTaxa
+        if (typeof obj?.ValorTotalComTaxa === 'number') {
+          return obj.ValorTotalComTaxa;
+        }
+        if (typeof obj?.ValorTotal === 'number') {
+          return obj.ValorTotal;
+        }
+        if (typeof obj?.ValorAdulto === 'number') {
+          return obj.ValorAdulto;
         }
         
-        // Prioridade 2: Propriedades diretas do objeto
-        if (typeof obj?.priceWithTax === 'number') return obj.priceWithTax;
+        // Novo formato da API Moblix - fareGroup
+        if (obj?.fareGroup?.priceWithTax && typeof obj.fareGroup.priceWithTax === 'number') {
+          return obj.fareGroup.priceWithTax;
+        }
+        if (obj?.fareGroup?.priceInCompany && typeof obj.fareGroup.priceInCompany === 'number') {
+          return obj.fareGroup.priceInCompany;
+        }
+        
+        // Novo formato da API Moblix - segments
+        if (obj?.segments && Array.isArray(obj.segments) && obj.segments.length > 0) {
+          const firstSegment = obj.segments[0];
+          if (typeof firstSegment?.ValorSegmento === 'number') {
+            return firstSegment.ValorSegmento;
+          }
+        }
+        
+        // Fallbacks para outros formatos
+        if (typeof obj?.ValorSegmento === 'number') return obj.ValorSegmento;
         if (typeof obj?.price === 'number') return obj.price;
         if (typeof obj?.totalPrice === 'number') return obj.totalPrice;
-        
-        // Prioridade 3: Formatos alternativos
         if (typeof obj?.Preco === 'number') return obj.Preco;
-        if (typeof obj?.PrecoTotal === 'number') return obj.PrecoTotal;
-        if (typeof obj?.ValorTotal === 'number') return obj.ValorTotal;
-        if (typeof obj?.Amount === 'number') return obj.Amount;
+        if (typeof obj?.Valor === 'number') return obj.Valor;
         
         return 0;
       };
       
-      // Extrai segmentos de diferentes formatos possíveis - APENAS DADOS REAIS
+      // Extrai segmentos do novo formato da API Moblix
       const extractSegments = (obj) => {
-        // Prioridade para dados reais da API Moblix
-        if (Array.isArray(obj?.segments)) return obj.segments;
-        if (Array.isArray(obj?.Segments)) return obj.Segments;
-        if (Array.isArray(obj?.trechos)) return obj.trechos;
-        if (Array.isArray(obj?.Trechos)) return obj.Trechos;
-        if (Array.isArray(obj?.legs)) return obj.legs;
-        if (Array.isArray(obj?.Legs)) return obj.Legs;
+        // Formato específico da Azul - obj.Voos
+        if (Array.isArray(obj?.Voos)) {
+          return obj.Voos.map(voo => ({
+            id: voo.Numero || Math.random().toString(36),
+            origin: voo.Origem,
+            destination: voo.Destino,
+            departure: voo.Origem,
+            arrival: voo.Destino,
+            departureTime: voo.Saida,
+            arrivalTime: voo.Chegada,
+            departureDate: voo.Saida,
+            arrivalDate: voo.Chegada,
+            duration: voo.Duracao,
+            durationText: voo.Tempo,
+            flightNumber: voo.Numero,
+            airline: 'Azul',
+            airlineCode: 'AD',
+            class: voo.ClasseStr || 'Econômica',
+            stops: 0,
+            operatedBy: 'Azul'
+          }));
+        }
         
-        // Se não há dados reais de segmentos, retorna array vazio
+        // Novo formato da API Moblix: obj.segments
+        if (Array.isArray(obj?.segments)) {
+          return obj.segments.map(segment => {
+            // Extrai dados do primeiro leg do segmento
+            const firstLeg = segment.legs && segment.legs.length > 0 ? segment.legs[0] : null;
+            return {
+              id: firstLeg?.flightNumber || segment.rateToken || Math.random().toString(36),
+              origin: firstLeg?.departure || segment.departure,
+              destination: firstLeg?.arrival || segment.arrival,
+              departure: firstLeg?.departure || segment.departure,
+              arrival: firstLeg?.arrival || segment.arrival,
+              departureTime: firstLeg?.departureDate || segment.departureDate,
+              arrivalTime: firstLeg?.arrivalDate || segment.arrivalDate,
+              departureDate: firstLeg?.departureDate || segment.departureDate,
+              arrivalDate: firstLeg?.arrivalDate || segment.arrivalDate,
+              duration: segment.duration,
+              durationText: `${Math.floor(segment.duration / 60)}h ${(segment.duration % 60).toString().padStart(2, '0')}m`,
+              flightNumber: firstLeg?.flightNumber || segment.flightNumber || 'N/A',
+              airline: firstLeg?.operatedBy?.name || firstLeg?.managedBy?.name || segment.airline || 'N/A',
+              airlineCode: firstLeg?.operatedBy?.iata || firstLeg?.managedBy?.iata || segment.airlineCode || 'N/A',
+              class: firstLeg?.seatClass?.description || 'Econômica',
+              stops: segment.numberOfStops || 0,
+              operatedBy: firstLeg?.operatedBy?.name || firstLeg?.managedBy?.name || 'N/A'
+            };
+          });
+        }
+        
+        // Fallbacks para outros formatos
+        if (Array.isArray(obj?.legs)) return obj.legs;
         return [];
       };
       
+      // Extrai informações de bagagem do novo formato da API Moblix
+      const extractBaggage = (obj) => {
+        // Novo formato: segments[0].fareProfile
+        if (obj?.segments && Array.isArray(obj.segments) && obj.segments.length > 0) {
+          const firstSegment = obj.segments[0];
+          if (firstSegment?.fareProfile?.baggage?.isIncluded) {
+            return firstSegment.fareProfile.baggage.texto || 'Incluída';
+          }
+          if (firstSegment?.fareProfile?.services && Array.isArray(firstSegment.fareProfile.services)) {
+            const services = firstSegment.fareProfile.services.map(service => service.description).join(', ');
+            return services || 'Incluída';
+          }
+        }
+        
+        // Fallback para formato antigo
+        if (obj?.fareProfile?.baggage?.isIncluded) {
+          return obj.fareProfile.baggage.texto || 'Incluída';
+        }
+        if (obj?.fareProfile?.services && Array.isArray(obj.fareProfile.services)) {
+          const services = obj.fareProfile.services.map(service => service.description).join(', ');
+          return services || 'Incluída';
+        }
+        return 'Incluída';
+      };
+      
       const normalizedFlight = {
-        id: flight.id || flight.Id || flight.uid || Math.random().toString(36),
+        id: flight.Token || flight.segments?.[0]?.rateToken || flight.rateToken || flight.id || flight.Id || Math.random().toString(36),
         priceWithTax: extractPrice(flight),
         price: extractPrice(flight),
         totalPrice: extractPrice(flight),
         segments: extractSegments(flight),
-        // Apenas mostra dados de volta se existirem DADOS REAIS na API
-        segmentsBack: (flight.segmentsBack && Array.isArray(flight.segmentsBack) && flight.segmentsBack.length > 0) ? 
-                      extractSegments(flight.segmentsBack) : null
+        // Dados específicos da nova API Moblix
+        companhia: flight.Companhia || flight.segments?.[0]?.legs?.[0]?.operatedBy?.name || flight.segments?.[0]?.legs?.[0]?.managedBy?.name || flight.validatingBy?.name || 'N/A',
+        numeroVoo: flight.Voos?.[0]?.Numero || flight.segments?.[0]?.legs?.[0]?.flightNumber || 'N/A',
+        horarioSaida: flight.Saida || flight.segments?.[0]?.departureDate || flight.departureDate || 'N/A',
+        horarioChegada: flight.Chegada || flight.segments?.[0]?.arrivalDate || flight.arrivalDate || 'N/A',
+        duracao: flight.Duracao || flight.segments?.[0]?.duration || flight.duration || 0,
+        duracaoText: flight.TempoTotalStr || (flight.segments?.[0]?.duration ? `${Math.floor(flight.segments[0].duration / 60)}h ${(flight.segments[0].duration % 60).toString().padStart(2, '0')}m` : 'N/A'),
+        escalas: flight.Voos?.length > 1 ? flight.Voos.length - 1 : (flight.segments?.[0]?.numberOfStops || 0),
+        classe: flight.Voos?.[0]?.ClasseStr || flight.segments?.[0]?.legs?.[0]?.seatClass?.description || 'Econômica',
+        bagagem: extractBaggage(flight),
+        // Dados adicionais da nova API Moblix
+        origem: flight.Origem || flight.segments?.[0]?.departure,
+        destino: flight.Destino || flight.segments?.[0]?.arrival,
+        valorTotal: extractPrice(flight),
+        valorTotalComTaxa: extractPrice(flight),
+        taxas: flight.Taxas || flight.fareGroup
       };
       
       console.log('Voo normalizado:', {

@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Configuração da API Moblix
 const API_BASE_URL = import.meta.env.DEV ? '/api' : 'https://api.moblix.com.br';
-const TOKEN_ENDPOINT = '/api/Token'; // Endpoint correto para autenticação
+const TOKEN_ENDPOINT = '/Token'; // Endpoint correto para autenticação
 
 // Credenciais da API
 const CREDENTIALS = {
