@@ -608,6 +608,7 @@ export default {
       isAuthenticated,
       userProfile,
       userInitials,
+      isLoadingProfile,
       toggleMobileMenu,
       closeMobileMenu,
       toggleUserMenu,

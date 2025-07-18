@@ -1,0 +1,27 @@
+{
+  "RequestId": null,
+  "Success": false,
+  "HasResult": false,
+  "ExceptionErro": {
+    "Message": "Object reference not set to an instance of an object.",
+    "InnerException": null,
+    "StackTrace": "   at AereoApi.Controllers.ConsultaController._Validar(ConsultaRQ rq) in /src/AereoApi/Controllers/ConsultaController.cs:line 145\n   at AereoApi.Controllers.ConsultaController.Post(ConsultaRQ rq) in /src/AereoApi/Controllers/ConsultaController.cs:line 21"
+  },
+  "MensagemErro": "Object reference not set to an instance of an object.",
+  "ExErro": {
+    "TargetSite": null,
+    "Message": "Object reference not set to an instance of an object.",
+    "Data": {},
+    "InnerException": null,
+    "HelpLink": null,
+    "Source": null,
+    "HResult": -2146233088,
+    "StackTrace": null
+  },
+  "Data": null,
+  "Completed": true,
+  "TotalItens": 0,
+  "Info": null,
+  "JsonObjectErro": null,
+  "AuxiliarResponse": null
+}

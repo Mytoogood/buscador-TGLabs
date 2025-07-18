@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 // Configuração da API Moblix
-const API_BASE_URL = import.meta.env.DEV ? '/api' : 'https://api.moblix.com.br';
-const TOKEN_ENDPOINT = '/Token'; // Endpoint correto para autenticação
+const API_BASE_URL = import.meta.env.DEV ? '' : 'https://api.moblix.com.br';
+const TOKEN_ENDPOINT = '/api/Token';
 
 // Credenciais da API
 const CREDENTIALS = {
@@ -11,9 +11,8 @@ const CREDENTIALS = {
 };
 
 // Armazena o token e sua data de expiração
-let accessToken = localStorage.getItem('moblixToken') || null;
-let tokenExpiry = localStorage.getItem('moblixTokenExpiry') ? 
-  parseInt(localStorage.getItem('moblixTokenExpiry'), 10) : null;
+let accessToken = null;
+let tokenExpiry = null;
 
 // Cabeçalhos padrão
 const DEFAULT_HEADERS = {
@@ -96,8 +95,11 @@ async function fetchNewToken() {
       if (data && data.access_token) {
         accessToken = data.access_token;
         tokenExpiry = Date.now() + (data.expires_in * 1000) - 300000; // 5 minutos antes
-        localStorage.setItem('moblixToken', accessToken);
-        localStorage.setItem('moblixTokenExpiry', tokenExpiry.toString());
+        // Salva no localStorage apenas se estiver no browser
+        if (typeof localStorage !== 'undefined') {
+          localStorage.setItem('moblixToken', accessToken);
+          localStorage.setItem('moblixTokenExpiry', tokenExpiry.toString());
+        }
         console.log('Token obtido com sucesso');
         return accessToken;
       }
@@ -165,9 +167,11 @@ export default {
         accessToken = response.data.access_token;
         tokenExpiry = Date.now() + (response.data.expires_in * 1000) - 300000;
         
-        // Salva no localStorage para persistência
-        localStorage.setItem('moblixToken', accessToken);
-        localStorage.setItem('moblixTokenExpiry', tokenExpiry.toString());
+        // Salva no localStorage para persistência (apenas no browser)
+        if (typeof localStorage !== 'undefined') {
+          localStorage.setItem('moblixToken', accessToken);
+          localStorage.setItem('moblixTokenExpiry', tokenExpiry.toString());
+        }
         
         console.log('Login realizado com sucesso');
         return response.data; // Retorna todos os dados da resposta
@@ -212,8 +216,10 @@ export default {
   logout() {
     accessToken = null;
     tokenExpiry = null;
-    localStorage.removeItem('moblixToken');
-    localStorage.removeItem('moblixTokenExpiry');
+    if (typeof localStorage !== 'undefined') {
+      localStorage.removeItem('moblixToken');
+      localStorage.removeItem('moblixTokenExpiry');
+    }
     console.log('Logout realizado com sucesso');
   },
   
@@ -254,20 +260,22 @@ export default {
       return accessToken;
     }
     
-    // Tenta obter do localStorage
-    const storedToken = localStorage.getItem('moblixToken');
-    const storedExpiry = localStorage.getItem('moblixTokenExpiry');
-    
-    if (storedToken && storedExpiry) {
-      // Verifica se o token armazenado ainda é válido
-      if (Date.now() < parseInt(storedExpiry, 10)) {
-        accessToken = storedToken;
-        tokenExpiry = storedExpiry;
-        return storedToken;
-      } else {
-        // Token expirado, remove do armazenamento
-        localStorage.removeItem('moblixToken');
-        localStorage.removeItem('moblixTokenExpiry');
+    // Tenta obter do localStorage (apenas no browser)
+    if (typeof localStorage !== 'undefined') {
+      const storedToken = localStorage.getItem('moblixToken');
+      const storedExpiry = localStorage.getItem('moblixTokenExpiry');
+      
+      if (storedToken && storedExpiry) {
+        // Verifica se o token armazenado ainda é válido
+        if (Date.now() < parseInt(storedExpiry, 10)) {
+          accessToken = storedToken;
+          tokenExpiry = storedExpiry;
+          return storedToken;
+        } else {
+          // Token expirado, remove do armazenamento
+          localStorage.removeItem('moblixToken');
+          localStorage.removeItem('moblixTokenExpiry');
+        }
       }
     }
     

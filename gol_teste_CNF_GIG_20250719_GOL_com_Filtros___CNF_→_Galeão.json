@@ -1,0 +1,3846 @@
+{
+  "RequestId": null,
+  "Success": true,
+  "HasResult": true,
+  "ExceptionErro": null,
+  "MensagemErro": null,
+  "ExErro": null,
+  "Data": [
+    {
+      "TokenConsulta": "16594_Gol_e5d5f52188054b818029f69df813c144",
+      "QntdAdulto": 1,
+      "QntdCrianca": 0,
+      "QntdBebe": 0,
+      "Ida": [
+        {
+          "Token": "86a03aa2e009435e9cffa7ec654bcfad",
+          "IdCia": 2,
+          "CiaParceira": {
+            "Id": 2,
+            "Nome": "Gol",
+            "Iata": "G3",
+            "Icao": "CIX",
+            "Pais": "Burundi"
+          },
+          "Cia": null,
+          "PontosAdulto": 69700,
+          "PontosCrianca": 0,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-1311",
+              "Saida": "2025-07-19T06:55:00",
+              "Chegada": "2025-07-19T08:20:00",
+              "Origem": "CNF",
+              "Destino": "CGH",
+              "Duracao": 0,
+              "Tempo": "01:25",
+              "TempoEspera": "02h 35m",
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            },
+            {
+              "Numero": "G3-1656",
+              "Saida": "2025-07-19T10:55:00",
+              "Chegada": "2025-07-19T12:05:00",
+              "Origem": "CGH",
+              "Destino": "GIG",
+              "Duracao": 0,
+              "Tempo": "01:10",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-CGH_CGH-GIG",
+          "Tarifas": null,
+          "ValorAdulto": 1254.6,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 1254.6,
+          "ValorAdultoNaCia": 1318.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 1254.6,
+          "ValorTotalComTaxa": 1288.1599999999999,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T06:55:00",
+          "Chegada": "2025-07-19T12:05:00",
+          "Duracao": 0,
+          "TempoTotalStr": "05h 10m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 4.754299572630629,
+          "FlightCode": "G31311G31656",
+          "Periodo": 1,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": "00000000-0000-0000-0000-000000000000",
+          "IdsViagensVolta": [
+            "00000000-0000-0000-0000-000000000000"
+          ],
+          "KeyIdViagensVolta": "00000000-0000-0000-0000-000000000000"
+        },
+        {
+          "Token": "6002f72b6db341c1a9a2544fa786848f",
+          "IdCia": 2,
+          "CiaParceira": {
+            "Id": 2,
+            "Nome": "Gol",
+            "Iata": "G3",
+            "Icao": "CIX",
+            "Pais": "Burundi"
+          },
+          "Cia": null,
+          "PontosAdulto": 69700,
+          "PontosCrianca": 0,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-1873",
+              "Saida": "2025-07-19T08:10:00",
+              "Chegada": "2025-07-19T09:35:00",
+              "Origem": "CNF",
+              "Destino": "CGH",
+              "Duracao": 0,
+              "Tempo": "01:25",
+              "TempoEspera": "01h 20m",
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            },
+            {
+              "Numero": "G3-1656",
+              "Saida": "2025-07-19T10:55:00",
+              "Chegada": "2025-07-19T12:05:00",
+              "Origem": "CGH",
+              "Destino": "GIG",
+              "Duracao": 0,
+              "Tempo": "01:10",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-CGH_CGH-GIG",
+          "Tarifas": null,
+          "ValorAdulto": 1254.6,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 1254.6,
+          "ValorAdultoNaCia": 1318.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 1254.6,
+          "ValorTotalComTaxa": 1288.1599999999999,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T08:10:00",
+          "Chegada": "2025-07-19T12:05:00",
+          "Duracao": 0,
+          "TempoTotalStr": "03h 55m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 4.754299572630629,
+          "FlightCode": "G31873G31656",
+          "Periodo": 1,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": "00000000-0000-0000-0000-000000000000",
+          "IdsViagensVolta": [
+            "00000000-0000-0000-0000-000000000000"
+          ],
+          "KeyIdViagensVolta": "00000000-0000-0000-0000-000000000000"
+        },
+        {
+          "Token": "6852b346f3a94df591d9770193f30f73",
+          "IdCia": 2,
+          "CiaParceira": null,
+          "Cia": null,
+          "PontosAdulto": -1,
+          "PontosCrianca": -1,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-1311",
+              "Saida": "2025-07-19T06:55:00",
+              "Chegada": "2025-07-19T08:20:00",
+              "Origem": "CNF",
+              "Destino": "CGH",
+              "Duracao": 85,
+              "Tempo": "01:25",
+              "TempoEspera": "02h 35m",
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            },
+            {
+              "Numero": "G3-1656",
+              "Saida": "2025-07-19T10:55:00",
+              "Chegada": "2025-07-19T12:05:00",
+              "Origem": "CGH",
+              "Destino": "GIG",
+              "Duracao": 70,
+              "Tempo": "01:10",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-CGH_CGH-GIG",
+          "Tarifas": [
+            {
+              "SegmentClass": null,
+              "Tipo": "LIGHT",
+              "ValorAdulto": 1318.9,
+              "ValorCrianca": 0,
+              "TaxaEmbarque": 33.56,
+              "Classe": "Economica",
+              "BagagensInclusas": [
+                {
+                  "Bagagem": 0,
+                  "TextoBagagem": "1 bagagem de mão",
+                  "Quantidade": 1
+                }
+              ]
+            }
+          ],
+          "ValorAdulto": 1318.9,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 0,
+          "ValorAdultoNaCia": 1318.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 1318.9,
+          "ValorTotalComTaxa": 1352.46,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T06:55:00",
+          "Chegada": "2025-07-19T12:05:00",
+          "Duracao": 0,
+          "TempoTotalStr": "05h 10m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 0,
+          "FlightCode": "G31311G31656",
+          "Periodo": 1,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": null,
+          "IdsViagensVolta": null,
+          "KeyIdViagensVolta": ""
+        },
+        {
+          "Token": "3fe6ba1adb2747fdbef1634f6f4ed8ff",
+          "IdCia": 2,
+          "CiaParceira": null,
+          "Cia": null,
+          "PontosAdulto": -1,
+          "PontosCrianca": -1,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-1873",
+              "Saida": "2025-07-19T08:10:00",
+              "Chegada": "2025-07-19T09:35:00",
+              "Origem": "CNF",
+              "Destino": "CGH",
+              "Duracao": 85,
+              "Tempo": "01:25",
+              "TempoEspera": "01h 20m",
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            },
+            {
+              "Numero": "G3-1656",
+              "Saida": "2025-07-19T10:55:00",
+              "Chegada": "2025-07-19T12:05:00",
+              "Origem": "CGH",
+              "Destino": "GIG",
+              "Duracao": 70,
+              "Tempo": "01:10",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-CGH_CGH-GIG",
+          "Tarifas": [
+            {
+              "SegmentClass": null,
+              "Tipo": "LIGHT",
+              "ValorAdulto": 1318.9,
+              "ValorCrianca": 0,
+              "TaxaEmbarque": 33.56,
+              "Classe": "Economica",
+              "BagagensInclusas": [
+                {
+                  "Bagagem": 0,
+                  "TextoBagagem": "1 bagagem de mão",
+                  "Quantidade": 1
+                }
+              ]
+            }
+          ],
+          "ValorAdulto": 1318.9,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 0,
+          "ValorAdultoNaCia": 1318.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 1318.9,
+          "ValorTotalComTaxa": 1352.46,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T08:10:00",
+          "Chegada": "2025-07-19T12:05:00",
+          "Duracao": 0,
+          "TempoTotalStr": "03h 55m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 0,
+          "FlightCode": "G31873G31656",
+          "Periodo": 1,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": null,
+          "IdsViagensVolta": null,
+          "KeyIdViagensVolta": ""
+        },
+        {
+          "Token": "5fb4a6c70bfb464f9b51cfe4526b48cd",
+          "IdCia": 2,
+          "CiaParceira": null,
+          "Cia": null,
+          "PontosAdulto": -1,
+          "PontosCrianca": -1,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-1323",
+              "Saida": "2025-07-19T11:00:00",
+              "Chegada": "2025-07-19T12:20:00",
+              "Origem": "CNF",
+              "Destino": "GRU",
+              "Duracao": 80,
+              "Tempo": "01:20",
+              "TempoEspera": "05h 40m",
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            },
+            {
+              "Numero": "G3-1924",
+              "Saida": "2025-07-19T18:00:00",
+              "Chegada": "2025-07-19T19:05:00",
+              "Origem": "GRU",
+              "Destino": "GIG",
+              "Duracao": 65,
+              "Tempo": "01:05",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-GRU_GRU-GIG",
+          "Tarifas": [
+            {
+              "SegmentClass": null,
+              "Tipo": "LIGHT",
+              "ValorAdulto": 1318.9,
+              "ValorCrianca": 0,
+              "TaxaEmbarque": 33.56,
+              "Classe": "Economica",
+              "BagagensInclusas": [
+                {
+                  "Bagagem": 0,
+                  "TextoBagagem": "1 bagagem de mão",
+                  "Quantidade": 1
+                }
+              ]
+            }
+          ],
+          "ValorAdulto": 1318.9,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 0,
+          "ValorAdultoNaCia": 1318.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 1318.9,
+          "ValorTotalComTaxa": 1352.46,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T11:00:00",
+          "Chegada": "2025-07-19T19:05:00",
+          "Duracao": 0,
+          "TempoTotalStr": "08h 05m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 0,
+          "FlightCode": "G31323G31924",
+          "Periodo": 1,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": null,
+          "IdsViagensVolta": null,
+          "KeyIdViagensVolta": ""
+        },
+        {
+          "Token": "51d021faac2f4f2986829dc4a1b5394c",
+          "IdCia": 2,
+          "CiaParceira": null,
+          "Cia": null,
+          "PontosAdulto": -1,
+          "PontosCrianca": -1,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-1311",
+              "Saida": "2025-07-19T06:55:00",
+              "Chegada": "2025-07-19T08:20:00",
+              "Origem": "CNF",
+              "Destino": "CGH",
+              "Duracao": 85,
+              "Tempo": "01:25",
+              "TempoEspera": "02h 35m",
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            },
+            {
+              "Numero": "G3-1656",
+              "Saida": "2025-07-19T10:55:00",
+              "Chegada": "2025-07-19T12:05:00",
+              "Origem": "CGH",
+              "Destino": "GIG",
+              "Duracao": 70,
+              "Tempo": "01:10",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-CGH_CGH-GIG",
+          "Tarifas": [
+            {
+              "SegmentClass": null,
+              "Tipo": "PLUS",
+              "ValorAdulto": 1453.9,
+              "ValorCrianca": 0,
+              "TaxaEmbarque": 33.56,
+              "Classe": "Economica",
+              "BagagensInclusas": [
+                {
+                  "Bagagem": 0,
+                  "TextoBagagem": "1 bagagem de mão",
+                  "Quantidade": 1
+                },
+                {
+                  "Bagagem": 1,
+                  "TextoBagagem": "Até 1 bagagens para despachar",
+                  "Quantidade": 1
+                }
+              ]
+            }
+          ],
+          "ValorAdulto": 1453.9,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 0,
+          "ValorAdultoNaCia": 1453.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 1453.9,
+          "ValorTotalComTaxa": 1487.46,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T06:55:00",
+          "Chegada": "2025-07-19T12:05:00",
+          "Duracao": 0,
+          "TempoTotalStr": "05h 10m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 0,
+          "FlightCode": "G31311G31656",
+          "Periodo": 1,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            },
+            {
+              "Bagagem": 1,
+              "TextoBagagem": "Até 1 bagagens para despachar",
+              "Quantidade": 1
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": null,
+          "IdsViagensVolta": null,
+          "KeyIdViagensVolta": ""
+        },
+        {
+          "Token": "10baf566fabe4cebaccf4b6c84eb269c",
+          "IdCia": 2,
+          "CiaParceira": null,
+          "Cia": null,
+          "PontosAdulto": -1,
+          "PontosCrianca": -1,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-1873",
+              "Saida": "2025-07-19T08:10:00",
+              "Chegada": "2025-07-19T09:35:00",
+              "Origem": "CNF",
+              "Destino": "CGH",
+              "Duracao": 85,
+              "Tempo": "01:25",
+              "TempoEspera": "01h 20m",
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            },
+            {
+              "Numero": "G3-1656",
+              "Saida": "2025-07-19T10:55:00",
+              "Chegada": "2025-07-19T12:05:00",
+              "Origem": "CGH",
+              "Destino": "GIG",
+              "Duracao": 70,
+              "Tempo": "01:10",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-CGH_CGH-GIG",
+          "Tarifas": [
+            {
+              "SegmentClass": null,
+              "Tipo": "PLUS",
+              "ValorAdulto": 1453.9,
+              "ValorCrianca": 0,
+              "TaxaEmbarque": 33.56,
+              "Classe": "Economica",
+              "BagagensInclusas": [
+                {
+                  "Bagagem": 0,
+                  "TextoBagagem": "1 bagagem de mão",
+                  "Quantidade": 1
+                },
+                {
+                  "Bagagem": 1,
+                  "TextoBagagem": "Até 1 bagagens para despachar",
+                  "Quantidade": 1
+                }
+              ]
+            }
+          ],
+          "ValorAdulto": 1453.9,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 0,
+          "ValorAdultoNaCia": 1453.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 1453.9,
+          "ValorTotalComTaxa": 1487.46,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T08:10:00",
+          "Chegada": "2025-07-19T12:05:00",
+          "Duracao": 0,
+          "TempoTotalStr": "03h 55m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 0,
+          "FlightCode": "G31873G31656",
+          "Periodo": 1,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            },
+            {
+              "Bagagem": 1,
+              "TextoBagagem": "Até 1 bagagens para despachar",
+              "Quantidade": 1
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": null,
+          "IdsViagensVolta": null,
+          "KeyIdViagensVolta": ""
+        },
+        {
+          "Token": "afdec754eae94aa899a30dfabb3c402b",
+          "IdCia": 2,
+          "CiaParceira": null,
+          "Cia": null,
+          "PontosAdulto": -1,
+          "PontosCrianca": -1,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-1323",
+              "Saida": "2025-07-19T11:00:00",
+              "Chegada": "2025-07-19T12:20:00",
+              "Origem": "CNF",
+              "Destino": "GRU",
+              "Duracao": 80,
+              "Tempo": "01:20",
+              "TempoEspera": "05h 40m",
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            },
+            {
+              "Numero": "G3-1924",
+              "Saida": "2025-07-19T18:00:00",
+              "Chegada": "2025-07-19T19:05:00",
+              "Origem": "GRU",
+              "Destino": "GIG",
+              "Duracao": 65,
+              "Tempo": "01:05",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-GRU_GRU-GIG",
+          "Tarifas": [
+            {
+              "SegmentClass": null,
+              "Tipo": "PLUS",
+              "ValorAdulto": 1453.9,
+              "ValorCrianca": 0,
+              "TaxaEmbarque": 33.56,
+              "Classe": "Economica",
+              "BagagensInclusas": [
+                {
+                  "Bagagem": 0,
+                  "TextoBagagem": "1 bagagem de mão",
+                  "Quantidade": 1
+                },
+                {
+                  "Bagagem": 1,
+                  "TextoBagagem": "Até 1 bagagens para despachar",
+                  "Quantidade": 1
+                }
+              ]
+            }
+          ],
+          "ValorAdulto": 1453.9,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 0,
+          "ValorAdultoNaCia": 1453.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 1453.9,
+          "ValorTotalComTaxa": 1487.46,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T11:00:00",
+          "Chegada": "2025-07-19T19:05:00",
+          "Duracao": 0,
+          "TempoTotalStr": "08h 05m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 0,
+          "FlightCode": "G31323G31924",
+          "Periodo": 1,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            },
+            {
+              "Bagagem": 1,
+              "TextoBagagem": "Até 1 bagagens para despachar",
+              "Quantidade": 1
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": null,
+          "IdsViagensVolta": null,
+          "KeyIdViagensVolta": ""
+        },
+        {
+          "Token": "d387e29097f84ca6ba67b46bb37a6865",
+          "IdCia": 2,
+          "CiaParceira": null,
+          "Cia": null,
+          "PontosAdulto": -1,
+          "PontosCrianca": -1,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-1311",
+              "Saida": "2025-07-19T06:55:00",
+              "Chegada": "2025-07-19T08:20:00",
+              "Origem": "CNF",
+              "Destino": "CGH",
+              "Duracao": 85,
+              "Tempo": "01:25",
+              "TempoEspera": "02h 35m",
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            },
+            {
+              "Numero": "G3-1656",
+              "Saida": "2025-07-19T10:55:00",
+              "Chegada": "2025-07-19T12:05:00",
+              "Origem": "CGH",
+              "Destino": "GIG",
+              "Duracao": 70,
+              "Tempo": "01:10",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-CGH_CGH-GIG",
+          "Tarifas": [
+            {
+              "SegmentClass": null,
+              "Tipo": "MAX",
+              "ValorAdulto": 1613.9,
+              "ValorCrianca": 0,
+              "TaxaEmbarque": 33.56,
+              "Classe": "Economica",
+              "BagagensInclusas": [
+                {
+                  "Bagagem": 0,
+                  "TextoBagagem": "1 bagagem de mão",
+                  "Quantidade": 1
+                },
+                {
+                  "Bagagem": 1,
+                  "TextoBagagem": "Até 2 bagagens para despachar",
+                  "Quantidade": 2
+                }
+              ]
+            }
+          ],
+          "ValorAdulto": 1613.9,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 0,
+          "ValorAdultoNaCia": 1613.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 1613.9,
+          "ValorTotalComTaxa": 1647.46,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T06:55:00",
+          "Chegada": "2025-07-19T12:05:00",
+          "Duracao": 0,
+          "TempoTotalStr": "05h 10m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 0,
+          "FlightCode": "G31311G31656",
+          "Periodo": 1,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            },
+            {
+              "Bagagem": 1,
+              "TextoBagagem": "Até 2 bagagens para despachar",
+              "Quantidade": 2
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": null,
+          "IdsViagensVolta": null,
+          "KeyIdViagensVolta": ""
+        },
+        {
+          "Token": "6d93ee5653f948fb8911e3d0079ef73a",
+          "IdCia": 2,
+          "CiaParceira": null,
+          "Cia": null,
+          "PontosAdulto": -1,
+          "PontosCrianca": -1,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-1873",
+              "Saida": "2025-07-19T08:10:00",
+              "Chegada": "2025-07-19T09:35:00",
+              "Origem": "CNF",
+              "Destino": "CGH",
+              "Duracao": 85,
+              "Tempo": "01:25",
+              "TempoEspera": "01h 20m",
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            },
+            {
+              "Numero": "G3-1656",
+              "Saida": "2025-07-19T10:55:00",
+              "Chegada": "2025-07-19T12:05:00",
+              "Origem": "CGH",
+              "Destino": "GIG",
+              "Duracao": 70,
+              "Tempo": "01:10",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-CGH_CGH-GIG",
+          "Tarifas": [
+            {
+              "SegmentClass": null,
+              "Tipo": "MAX",
+              "ValorAdulto": 1613.9,
+              "ValorCrianca": 0,
+              "TaxaEmbarque": 33.56,
+              "Classe": "Economica",
+              "BagagensInclusas": [
+                {
+                  "Bagagem": 0,
+                  "TextoBagagem": "1 bagagem de mão",
+                  "Quantidade": 1
+                },
+                {
+                  "Bagagem": 1,
+                  "TextoBagagem": "Até 2 bagagens para despachar",
+                  "Quantidade": 2
+                }
+              ]
+            }
+          ],
+          "ValorAdulto": 1613.9,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 0,
+          "ValorAdultoNaCia": 1613.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 1613.9,
+          "ValorTotalComTaxa": 1647.46,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T08:10:00",
+          "Chegada": "2025-07-19T12:05:00",
+          "Duracao": 0,
+          "TempoTotalStr": "03h 55m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 0,
+          "FlightCode": "G31873G31656",
+          "Periodo": 1,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            },
+            {
+              "Bagagem": 1,
+              "TextoBagagem": "Até 2 bagagens para despachar",
+              "Quantidade": 2
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": null,
+          "IdsViagensVolta": null,
+          "KeyIdViagensVolta": ""
+        },
+        {
+          "Token": "5202be28f9d84b54bdb1dbc1cf73d630",
+          "IdCia": 2,
+          "CiaParceira": null,
+          "Cia": null,
+          "PontosAdulto": -1,
+          "PontosCrianca": -1,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-1323",
+              "Saida": "2025-07-19T11:00:00",
+              "Chegada": "2025-07-19T12:20:00",
+              "Origem": "CNF",
+              "Destino": "GRU",
+              "Duracao": 80,
+              "Tempo": "01:20",
+              "TempoEspera": "05h 40m",
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            },
+            {
+              "Numero": "G3-1924",
+              "Saida": "2025-07-19T18:00:00",
+              "Chegada": "2025-07-19T19:05:00",
+              "Origem": "GRU",
+              "Destino": "GIG",
+              "Duracao": 65,
+              "Tempo": "01:05",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-GRU_GRU-GIG",
+          "Tarifas": [
+            {
+              "SegmentClass": null,
+              "Tipo": "MAX",
+              "ValorAdulto": 1613.9,
+              "ValorCrianca": 0,
+              "TaxaEmbarque": 33.56,
+              "Classe": "Economica",
+              "BagagensInclusas": [
+                {
+                  "Bagagem": 0,
+                  "TextoBagagem": "1 bagagem de mão",
+                  "Quantidade": 1
+                },
+                {
+                  "Bagagem": 1,
+                  "TextoBagagem": "Até 2 bagagens para despachar",
+                  "Quantidade": 2
+                }
+              ]
+            }
+          ],
+          "ValorAdulto": 1613.9,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 0,
+          "ValorAdultoNaCia": 1613.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 1613.9,
+          "ValorTotalComTaxa": 1647.46,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T11:00:00",
+          "Chegada": "2025-07-19T19:05:00",
+          "Duracao": 0,
+          "TempoTotalStr": "08h 05m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 0,
+          "FlightCode": "G31323G31924",
+          "Periodo": 1,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            },
+            {
+              "Bagagem": 1,
+              "TextoBagagem": "Até 2 bagagens para despachar",
+              "Quantidade": 2
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": null,
+          "IdsViagensVolta": null,
+          "KeyIdViagensVolta": ""
+        },
+        {
+          "Token": "d6b5fd58c9fe43099ddc95d4b4e3616b",
+          "IdCia": 2,
+          "CiaParceira": {
+            "Id": 2,
+            "Nome": "Gol",
+            "Iata": "G3",
+            "Icao": "CIX",
+            "Pais": "Burundi"
+          },
+          "Cia": null,
+          "PontosAdulto": 90600,
+          "PontosCrianca": 0,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-1357",
+              "Saida": "2025-07-19T06:05:00",
+              "Chegada": "2025-07-19T07:25:00",
+              "Origem": "CNF",
+              "Destino": "GRU",
+              "Duracao": 0,
+              "Tempo": "01:20",
+              "TempoEspera": "01h 25m",
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            },
+            {
+              "Numero": "G3-1922",
+              "Saida": "2025-07-19T08:50:00",
+              "Chegada": "2025-07-19T09:55:00",
+              "Origem": "GRU",
+              "Destino": "GIG",
+              "Duracao": 0,
+              "Tempo": "01:05",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-GRU_GRU-GIG",
+          "Tarifas": null,
+          "ValorAdulto": 1630.8,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 1630.8,
+          "ValorAdultoNaCia": 1714.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 1630.8,
+          "ValorTotalComTaxa": 1664.36,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T06:05:00",
+          "Chegada": "2025-07-19T09:55:00",
+          "Duracao": 0,
+          "TempoTotalStr": "03h 50m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 4.809947039108707,
+          "FlightCode": "G31357G31922",
+          "Periodo": 1,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": "00000000-0000-0000-0000-000000000000",
+          "IdsViagensVolta": [
+            "00000000-0000-0000-0000-000000000000"
+          ],
+          "KeyIdViagensVolta": "00000000-0000-0000-0000-000000000000"
+        },
+        {
+          "Token": "a3c77dbd563d456abbbe01ae44681930",
+          "IdCia": 2,
+          "CiaParceira": {
+            "Id": 2,
+            "Nome": "Gol",
+            "Iata": "G3",
+            "Icao": "CIX",
+            "Pais": "Burundi"
+          },
+          "Cia": null,
+          "PontosAdulto": 90600,
+          "PontosCrianca": 0,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-1337",
+              "Saida": "2025-07-19T15:30:00",
+              "Chegada": "2025-07-19T16:45:00",
+              "Origem": "CNF",
+              "Destino": "GRU",
+              "Duracao": 0,
+              "Tempo": "01:15",
+              "TempoEspera": "01h 15m",
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            },
+            {
+              "Numero": "G3-1924",
+              "Saida": "2025-07-19T18:00:00",
+              "Chegada": "2025-07-19T19:05:00",
+              "Origem": "GRU",
+              "Destino": "GIG",
+              "Duracao": 0,
+              "Tempo": "01:05",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-GRU_GRU-GIG",
+          "Tarifas": null,
+          "ValorAdulto": 1630.8,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 1630.8,
+          "ValorAdultoNaCia": 1714.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 1630.8,
+          "ValorTotalComTaxa": 1664.36,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T15:30:00",
+          "Chegada": "2025-07-19T19:05:00",
+          "Duracao": 0,
+          "TempoTotalStr": "03h 35m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 4.809947039108707,
+          "FlightCode": "G31337G31924",
+          "Periodo": 2,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": "00000000-0000-0000-0000-000000000000",
+          "IdsViagensVolta": [
+            "00000000-0000-0000-0000-000000000000"
+          ],
+          "KeyIdViagensVolta": "00000000-0000-0000-0000-000000000000"
+        },
+        {
+          "Token": "22a380caf05540cd816b0a5f3970f745",
+          "IdCia": 2,
+          "CiaParceira": null,
+          "Cia": null,
+          "PontosAdulto": -1,
+          "PontosCrianca": -1,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-1357",
+              "Saida": "2025-07-19T06:05:00",
+              "Chegada": "2025-07-19T07:25:00",
+              "Origem": "CNF",
+              "Destino": "GRU",
+              "Duracao": 80,
+              "Tempo": "01:20",
+              "TempoEspera": "01h 25m",
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            },
+            {
+              "Numero": "G3-1922",
+              "Saida": "2025-07-19T08:50:00",
+              "Chegada": "2025-07-19T09:55:00",
+              "Origem": "GRU",
+              "Destino": "GIG",
+              "Duracao": 65,
+              "Tempo": "01:05",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-GRU_GRU-GIG",
+          "Tarifas": [
+            {
+              "SegmentClass": null,
+              "Tipo": "LIGHT",
+              "ValorAdulto": 1714.9,
+              "ValorCrianca": 0,
+              "TaxaEmbarque": 33.56,
+              "Classe": "Economica",
+              "BagagensInclusas": [
+                {
+                  "Bagagem": 0,
+                  "TextoBagagem": "1 bagagem de mão",
+                  "Quantidade": 1
+                }
+              ]
+            }
+          ],
+          "ValorAdulto": 1714.9,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 0,
+          "ValorAdultoNaCia": 1714.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 1714.9,
+          "ValorTotalComTaxa": 1748.46,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T06:05:00",
+          "Chegada": "2025-07-19T09:55:00",
+          "Duracao": 0,
+          "TempoTotalStr": "03h 50m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 0,
+          "FlightCode": "G31357G31922",
+          "Periodo": 1,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": null,
+          "IdsViagensVolta": null,
+          "KeyIdViagensVolta": ""
+        },
+        {
+          "Token": "8634bb0dfb3b4b08b6e4082958d8dd98",
+          "IdCia": 2,
+          "CiaParceira": null,
+          "Cia": null,
+          "PontosAdulto": -1,
+          "PontosCrianca": -1,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-1337",
+              "Saida": "2025-07-19T15:30:00",
+              "Chegada": "2025-07-19T16:45:00",
+              "Origem": "CNF",
+              "Destino": "GRU",
+              "Duracao": 75,
+              "Tempo": "01:15",
+              "TempoEspera": "01h 15m",
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            },
+            {
+              "Numero": "G3-1924",
+              "Saida": "2025-07-19T18:00:00",
+              "Chegada": "2025-07-19T19:05:00",
+              "Origem": "GRU",
+              "Destino": "GIG",
+              "Duracao": 65,
+              "Tempo": "01:05",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-GRU_GRU-GIG",
+          "Tarifas": [
+            {
+              "SegmentClass": null,
+              "Tipo": "LIGHT",
+              "ValorAdulto": 1714.9,
+              "ValorCrianca": 0,
+              "TaxaEmbarque": 33.56,
+              "Classe": "Economica",
+              "BagagensInclusas": [
+                {
+                  "Bagagem": 0,
+                  "TextoBagagem": "1 bagagem de mão",
+                  "Quantidade": 1
+                }
+              ]
+            }
+          ],
+          "ValorAdulto": 1714.9,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 0,
+          "ValorAdultoNaCia": 1714.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 1714.9,
+          "ValorTotalComTaxa": 1748.46,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T15:30:00",
+          "Chegada": "2025-07-19T19:05:00",
+          "Duracao": 0,
+          "TempoTotalStr": "03h 35m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 0,
+          "FlightCode": "G31337G31924",
+          "Periodo": 2,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": null,
+          "IdsViagensVolta": null,
+          "KeyIdViagensVolta": ""
+        },
+        {
+          "Token": "36f63e2148a74a5e8890c6907a1e562a",
+          "IdCia": 2,
+          "CiaParceira": null,
+          "Cia": null,
+          "PontosAdulto": -1,
+          "PontosCrianca": -1,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-1357",
+              "Saida": "2025-07-19T06:05:00",
+              "Chegada": "2025-07-19T07:25:00",
+              "Origem": "CNF",
+              "Destino": "GRU",
+              "Duracao": 80,
+              "Tempo": "01:20",
+              "TempoEspera": "01h 25m",
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            },
+            {
+              "Numero": "G3-1922",
+              "Saida": "2025-07-19T08:50:00",
+              "Chegada": "2025-07-19T09:55:00",
+              "Origem": "GRU",
+              "Destino": "GIG",
+              "Duracao": 65,
+              "Tempo": "01:05",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-GRU_GRU-GIG",
+          "Tarifas": [
+            {
+              "SegmentClass": null,
+              "Tipo": "PLUS",
+              "ValorAdulto": 1849.9,
+              "ValorCrianca": 0,
+              "TaxaEmbarque": 33.56,
+              "Classe": "Economica",
+              "BagagensInclusas": [
+                {
+                  "Bagagem": 0,
+                  "TextoBagagem": "1 bagagem de mão",
+                  "Quantidade": 1
+                },
+                {
+                  "Bagagem": 1,
+                  "TextoBagagem": "Até 1 bagagens para despachar",
+                  "Quantidade": 1
+                }
+              ]
+            }
+          ],
+          "ValorAdulto": 1849.9,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 0,
+          "ValorAdultoNaCia": 1849.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 1849.9,
+          "ValorTotalComTaxa": 1883.46,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T06:05:00",
+          "Chegada": "2025-07-19T09:55:00",
+          "Duracao": 0,
+          "TempoTotalStr": "03h 50m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 0,
+          "FlightCode": "G31357G31922",
+          "Periodo": 1,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            },
+            {
+              "Bagagem": 1,
+              "TextoBagagem": "Até 1 bagagens para despachar",
+              "Quantidade": 1
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": null,
+          "IdsViagensVolta": null,
+          "KeyIdViagensVolta": ""
+        },
+        {
+          "Token": "0595ccd19a7e476786bf5d74d3b71f81",
+          "IdCia": 2,
+          "CiaParceira": null,
+          "Cia": null,
+          "PontosAdulto": -1,
+          "PontosCrianca": -1,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-1337",
+              "Saida": "2025-07-19T15:30:00",
+              "Chegada": "2025-07-19T16:45:00",
+              "Origem": "CNF",
+              "Destino": "GRU",
+              "Duracao": 75,
+              "Tempo": "01:15",
+              "TempoEspera": "01h 15m",
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            },
+            {
+              "Numero": "G3-1924",
+              "Saida": "2025-07-19T18:00:00",
+              "Chegada": "2025-07-19T19:05:00",
+              "Origem": "GRU",
+              "Destino": "GIG",
+              "Duracao": 65,
+              "Tempo": "01:05",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-GRU_GRU-GIG",
+          "Tarifas": [
+            {
+              "SegmentClass": null,
+              "Tipo": "PLUS",
+              "ValorAdulto": 1849.9,
+              "ValorCrianca": 0,
+              "TaxaEmbarque": 33.56,
+              "Classe": "Economica",
+              "BagagensInclusas": [
+                {
+                  "Bagagem": 0,
+                  "TextoBagagem": "1 bagagem de mão",
+                  "Quantidade": 1
+                },
+                {
+                  "Bagagem": 1,
+                  "TextoBagagem": "Até 1 bagagens para despachar",
+                  "Quantidade": 1
+                }
+              ]
+            }
+          ],
+          "ValorAdulto": 1849.9,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 0,
+          "ValorAdultoNaCia": 1849.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 1849.9,
+          "ValorTotalComTaxa": 1883.46,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T15:30:00",
+          "Chegada": "2025-07-19T19:05:00",
+          "Duracao": 0,
+          "TempoTotalStr": "03h 35m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 0,
+          "FlightCode": "G31337G31924",
+          "Periodo": 2,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            },
+            {
+              "Bagagem": 1,
+              "TextoBagagem": "Até 1 bagagens para despachar",
+              "Quantidade": 1
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": null,
+          "IdsViagensVolta": null,
+          "KeyIdViagensVolta": ""
+        },
+        {
+          "Token": "0ab33a67a80c4766915a7a2fb6eec613",
+          "IdCia": 2,
+          "CiaParceira": null,
+          "Cia": null,
+          "PontosAdulto": -1,
+          "PontosCrianca": -1,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-1357",
+              "Saida": "2025-07-19T06:05:00",
+              "Chegada": "2025-07-19T07:25:00",
+              "Origem": "CNF",
+              "Destino": "GRU",
+              "Duracao": 80,
+              "Tempo": "01:20",
+              "TempoEspera": "01h 25m",
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            },
+            {
+              "Numero": "G3-1922",
+              "Saida": "2025-07-19T08:50:00",
+              "Chegada": "2025-07-19T09:55:00",
+              "Origem": "GRU",
+              "Destino": "GIG",
+              "Duracao": 65,
+              "Tempo": "01:05",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-GRU_GRU-GIG",
+          "Tarifas": [
+            {
+              "SegmentClass": null,
+              "Tipo": "MAX",
+              "ValorAdulto": 2019.9,
+              "ValorCrianca": 0,
+              "TaxaEmbarque": 33.56,
+              "Classe": "Economica",
+              "BagagensInclusas": [
+                {
+                  "Bagagem": 0,
+                  "TextoBagagem": "1 bagagem de mão",
+                  "Quantidade": 1
+                },
+                {
+                  "Bagagem": 1,
+                  "TextoBagagem": "Até 2 bagagens para despachar",
+                  "Quantidade": 2
+                }
+              ]
+            }
+          ],
+          "ValorAdulto": 2019.9,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 0,
+          "ValorAdultoNaCia": 2019.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 2019.9,
+          "ValorTotalComTaxa": 2053.46,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T06:05:00",
+          "Chegada": "2025-07-19T09:55:00",
+          "Duracao": 0,
+          "TempoTotalStr": "03h 50m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 0,
+          "FlightCode": "G31357G31922",
+          "Periodo": 1,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            },
+            {
+              "Bagagem": 1,
+              "TextoBagagem": "Até 2 bagagens para despachar",
+              "Quantidade": 2
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": null,
+          "IdsViagensVolta": null,
+          "KeyIdViagensVolta": ""
+        },
+        {
+          "Token": "fe1345f33f6c4842ba6398eab4cd84e2",
+          "IdCia": 2,
+          "CiaParceira": null,
+          "Cia": null,
+          "PontosAdulto": -1,
+          "PontosCrianca": -1,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-1337",
+              "Saida": "2025-07-19T15:30:00",
+              "Chegada": "2025-07-19T16:45:00",
+              "Origem": "CNF",
+              "Destino": "GRU",
+              "Duracao": 75,
+              "Tempo": "01:15",
+              "TempoEspera": "01h 15m",
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            },
+            {
+              "Numero": "G3-1924",
+              "Saida": "2025-07-19T18:00:00",
+              "Chegada": "2025-07-19T19:05:00",
+              "Origem": "GRU",
+              "Destino": "GIG",
+              "Duracao": 65,
+              "Tempo": "01:05",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-GRU_GRU-GIG",
+          "Tarifas": [
+            {
+              "SegmentClass": null,
+              "Tipo": "MAX",
+              "ValorAdulto": 2019.9,
+              "ValorCrianca": 0,
+              "TaxaEmbarque": 33.56,
+              "Classe": "Economica",
+              "BagagensInclusas": [
+                {
+                  "Bagagem": 0,
+                  "TextoBagagem": "1 bagagem de mão",
+                  "Quantidade": 1
+                },
+                {
+                  "Bagagem": 1,
+                  "TextoBagagem": "Até 2 bagagens para despachar",
+                  "Quantidade": 2
+                }
+              ]
+            }
+          ],
+          "ValorAdulto": 2019.9,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 0,
+          "ValorAdultoNaCia": 2019.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 2019.9,
+          "ValorTotalComTaxa": 2053.46,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T15:30:00",
+          "Chegada": "2025-07-19T19:05:00",
+          "Duracao": 0,
+          "TempoTotalStr": "03h 35m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 0,
+          "FlightCode": "G31337G31924",
+          "Periodo": 2,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            },
+            {
+              "Bagagem": 1,
+              "TextoBagagem": "Até 2 bagagens para despachar",
+              "Quantidade": 2
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": null,
+          "IdsViagensVolta": null,
+          "KeyIdViagensVolta": ""
+        },
+        {
+          "Token": "e74237d8f4a347dbae45699755abd1b1",
+          "IdCia": 2,
+          "CiaParceira": null,
+          "Cia": null,
+          "PontosAdulto": -1,
+          "PontosCrianca": -1,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-2089",
+              "Saida": "2025-07-19T06:00:00",
+              "Chegada": "2025-07-19T07:15:00",
+              "Origem": "CNF",
+              "Destino": "GIG",
+              "Duracao": 75,
+              "Tempo": "01:15",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-GIG",
+          "Tarifas": [
+            {
+              "SegmentClass": null,
+              "Tipo": "LIGHT",
+              "ValorAdulto": 2406.9,
+              "ValorCrianca": 0,
+              "TaxaEmbarque": 33.56,
+              "Classe": "Economica",
+              "BagagensInclusas": [
+                {
+                  "Bagagem": 0,
+                  "TextoBagagem": "1 bagagem de mão",
+                  "Quantidade": 1
+                }
+              ]
+            }
+          ],
+          "ValorAdulto": 2406.9,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 0,
+          "ValorAdultoNaCia": 2406.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 2406.9,
+          "ValorTotalComTaxa": 2440.46,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T06:00:00",
+          "Chegada": "2025-07-19T07:15:00",
+          "Duracao": 0,
+          "TempoTotalStr": "01h 15m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 0,
+          "FlightCode": "G32089",
+          "Periodo": 1,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": null,
+          "IdsViagensVolta": null,
+          "KeyIdViagensVolta": ""
+        },
+        {
+          "Token": "13f2b72e303c477888d0b2b0e3513c6e",
+          "IdCia": 2,
+          "CiaParceira": null,
+          "Cia": null,
+          "PontosAdulto": -1,
+          "PontosCrianca": -1,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-1357",
+              "Saida": "2025-07-19T06:05:00",
+              "Chegada": "2025-07-19T07:25:00",
+              "Origem": "CNF",
+              "Destino": "GRU",
+              "Duracao": 80,
+              "Tempo": "01:20",
+              "TempoEspera": "06h 20m",
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            },
+            {
+              "Numero": "G3-9168",
+              "Saida": "2025-07-19T13:45:00",
+              "Chegada": "2025-07-19T14:50:00",
+              "Origem": "GRU",
+              "Destino": "GIG",
+              "Duracao": 65,
+              "Tempo": "01:05",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-GRU_GRU-GIG",
+          "Tarifas": [
+            {
+              "SegmentClass": null,
+              "Tipo": "LIGHT",
+              "ValorAdulto": 2406.9,
+              "ValorCrianca": 0,
+              "TaxaEmbarque": 33.56,
+              "Classe": "Economica",
+              "BagagensInclusas": [
+                {
+                  "Bagagem": 0,
+                  "TextoBagagem": "1 bagagem de mão",
+                  "Quantidade": 1
+                }
+              ]
+            }
+          ],
+          "ValorAdulto": 2406.9,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 0,
+          "ValorAdultoNaCia": 2406.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 2406.9,
+          "ValorTotalComTaxa": 2440.46,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T06:05:00",
+          "Chegada": "2025-07-19T14:50:00",
+          "Duracao": 0,
+          "TempoTotalStr": "08h 45m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 0,
+          "FlightCode": "G31357G39168",
+          "Periodo": 1,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": null,
+          "IdsViagensVolta": null,
+          "KeyIdViagensVolta": ""
+        },
+        {
+          "Token": "aa09b667e7b64decaf51a60825cfa4bb",
+          "IdCia": 2,
+          "CiaParceira": null,
+          "Cia": null,
+          "PontosAdulto": -1,
+          "PontosCrianca": -1,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-1623",
+              "Saida": "2025-07-19T06:30:00",
+              "Chegada": "2025-07-19T07:50:00",
+              "Origem": "CNF",
+              "Destino": "BSB",
+              "Duracao": 80,
+              "Tempo": "01:20",
+              "TempoEspera": "00h 45m",
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            },
+            {
+              "Numero": "G3-2074",
+              "Saida": "2025-07-19T08:35:00",
+              "Chegada": "2025-07-19T10:20:00",
+              "Origem": "BSB",
+              "Destino": "GIG",
+              "Duracao": 105,
+              "Tempo": "01:45",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-BSB_BSB-GIG",
+          "Tarifas": [
+            {
+              "SegmentClass": null,
+              "Tipo": "LIGHT",
+              "ValorAdulto": 2406.9,
+              "ValorCrianca": 0,
+              "TaxaEmbarque": 33.56,
+              "Classe": "Economica",
+              "BagagensInclusas": [
+                {
+                  "Bagagem": 0,
+                  "TextoBagagem": "1 bagagem de mão",
+                  "Quantidade": 1
+                }
+              ]
+            }
+          ],
+          "ValorAdulto": 2406.9,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 0,
+          "ValorAdultoNaCia": 2406.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 2406.9,
+          "ValorTotalComTaxa": 2440.46,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T06:30:00",
+          "Chegada": "2025-07-19T10:20:00",
+          "Duracao": 0,
+          "TempoTotalStr": "03h 50m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 0,
+          "FlightCode": "G31623G32074",
+          "Periodo": 1,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": null,
+          "IdsViagensVolta": null,
+          "KeyIdViagensVolta": ""
+        },
+        {
+          "Token": "ac3d7a608c594cb591847c36d51b900f",
+          "IdCia": 2,
+          "CiaParceira": null,
+          "Cia": null,
+          "PontosAdulto": -1,
+          "PontosCrianca": -1,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-1623",
+              "Saida": "2025-07-19T06:30:00",
+              "Chegada": "2025-07-19T07:50:00",
+              "Origem": "CNF",
+              "Destino": "BSB",
+              "Duracao": 80,
+              "Tempo": "01:20",
+              "TempoEspera": "03h 40m",
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            },
+            {
+              "Numero": "G3-9227",
+              "Saida": "2025-07-19T11:30:00",
+              "Chegada": "2025-07-19T13:15:00",
+              "Origem": "BSB",
+              "Destino": "GIG",
+              "Duracao": 105,
+              "Tempo": "01:45",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-BSB_BSB-GIG",
+          "Tarifas": [
+            {
+              "SegmentClass": null,
+              "Tipo": "LIGHT",
+              "ValorAdulto": 2406.9,
+              "ValorCrianca": 0,
+              "TaxaEmbarque": 33.56,
+              "Classe": "Economica",
+              "BagagensInclusas": [
+                {
+                  "Bagagem": 0,
+                  "TextoBagagem": "1 bagagem de mão",
+                  "Quantidade": 1
+                }
+              ]
+            }
+          ],
+          "ValorAdulto": 2406.9,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 0,
+          "ValorAdultoNaCia": 2406.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 2406.9,
+          "ValorTotalComTaxa": 2440.46,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T06:30:00",
+          "Chegada": "2025-07-19T13:15:00",
+          "Duracao": 0,
+          "TempoTotalStr": "06h 45m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 0,
+          "FlightCode": "G31623G39227",
+          "Periodo": 1,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": null,
+          "IdsViagensVolta": null,
+          "KeyIdViagensVolta": ""
+        },
+        {
+          "Token": "406d3ef3d7ce45cd87d1072d949c3124",
+          "IdCia": 2,
+          "CiaParceira": null,
+          "Cia": null,
+          "PontosAdulto": -1,
+          "PontosCrianca": -1,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-1323",
+              "Saida": "2025-07-19T11:00:00",
+              "Chegada": "2025-07-19T12:20:00",
+              "Origem": "CNF",
+              "Destino": "GRU",
+              "Duracao": 80,
+              "Tempo": "01:20",
+              "TempoEspera": "01h 25m",
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            },
+            {
+              "Numero": "G3-9168",
+              "Saida": "2025-07-19T13:45:00",
+              "Chegada": "2025-07-19T14:50:00",
+              "Origem": "GRU",
+              "Destino": "GIG",
+              "Duracao": 65,
+              "Tempo": "01:05",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-GRU_GRU-GIG",
+          "Tarifas": [
+            {
+              "SegmentClass": null,
+              "Tipo": "LIGHT",
+              "ValorAdulto": 2406.9,
+              "ValorCrianca": 0,
+              "TaxaEmbarque": 33.56,
+              "Classe": "Economica",
+              "BagagensInclusas": [
+                {
+                  "Bagagem": 0,
+                  "TextoBagagem": "1 bagagem de mão",
+                  "Quantidade": 1
+                }
+              ]
+            }
+          ],
+          "ValorAdulto": 2406.9,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 0,
+          "ValorAdultoNaCia": 2406.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 2406.9,
+          "ValorTotalComTaxa": 2440.46,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T11:00:00",
+          "Chegada": "2025-07-19T14:50:00",
+          "Duracao": 0,
+          "TempoTotalStr": "03h 50m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 0,
+          "FlightCode": "G31323G39168",
+          "Periodo": 1,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": null,
+          "IdsViagensVolta": null,
+          "KeyIdViagensVolta": ""
+        },
+        {
+          "Token": "750ec10efca140f0aa3685d53ad906d7",
+          "IdCia": 2,
+          "CiaParceira": null,
+          "Cia": null,
+          "PontosAdulto": -1,
+          "PontosCrianca": -1,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-2089",
+              "Saida": "2025-07-19T06:00:00",
+              "Chegada": "2025-07-19T07:15:00",
+              "Origem": "CNF",
+              "Destino": "GIG",
+              "Duracao": 75,
+              "Tempo": "01:15",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-GIG",
+          "Tarifas": [
+            {
+              "SegmentClass": null,
+              "Tipo": "PLUS",
+              "ValorAdulto": 2541.9,
+              "ValorCrianca": 0,
+              "TaxaEmbarque": 33.56,
+              "Classe": "Economica",
+              "BagagensInclusas": [
+                {
+                  "Bagagem": 0,
+                  "TextoBagagem": "1 bagagem de mão",
+                  "Quantidade": 1
+                },
+                {
+                  "Bagagem": 1,
+                  "TextoBagagem": "Até 1 bagagens para despachar",
+                  "Quantidade": 1
+                }
+              ]
+            }
+          ],
+          "ValorAdulto": 2541.9,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 0,
+          "ValorAdultoNaCia": 2541.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 2541.9,
+          "ValorTotalComTaxa": 2575.46,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T06:00:00",
+          "Chegada": "2025-07-19T07:15:00",
+          "Duracao": 0,
+          "TempoTotalStr": "01h 15m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 0,
+          "FlightCode": "G32089",
+          "Periodo": 1,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            },
+            {
+              "Bagagem": 1,
+              "TextoBagagem": "Até 1 bagagens para despachar",
+              "Quantidade": 1
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": null,
+          "IdsViagensVolta": null,
+          "KeyIdViagensVolta": ""
+        },
+        {
+          "Token": "3c4c47944a284b1288514806f80aebce",
+          "IdCia": 2,
+          "CiaParceira": null,
+          "Cia": null,
+          "PontosAdulto": -1,
+          "PontosCrianca": -1,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-1357",
+              "Saida": "2025-07-19T06:05:00",
+              "Chegada": "2025-07-19T07:25:00",
+              "Origem": "CNF",
+              "Destino": "GRU",
+              "Duracao": 80,
+              "Tempo": "01:20",
+              "TempoEspera": "06h 20m",
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            },
+            {
+              "Numero": "G3-9168",
+              "Saida": "2025-07-19T13:45:00",
+              "Chegada": "2025-07-19T14:50:00",
+              "Origem": "GRU",
+              "Destino": "GIG",
+              "Duracao": 65,
+              "Tempo": "01:05",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-GRU_GRU-GIG",
+          "Tarifas": [
+            {
+              "SegmentClass": null,
+              "Tipo": "PLUS",
+              "ValorAdulto": 2541.9,
+              "ValorCrianca": 0,
+              "TaxaEmbarque": 33.56,
+              "Classe": "Economica",
+              "BagagensInclusas": [
+                {
+                  "Bagagem": 0,
+                  "TextoBagagem": "1 bagagem de mão",
+                  "Quantidade": 1
+                },
+                {
+                  "Bagagem": 1,
+                  "TextoBagagem": "Até 1 bagagens para despachar",
+                  "Quantidade": 1
+                }
+              ]
+            }
+          ],
+          "ValorAdulto": 2541.9,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 0,
+          "ValorAdultoNaCia": 2541.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 2541.9,
+          "ValorTotalComTaxa": 2575.46,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T06:05:00",
+          "Chegada": "2025-07-19T14:50:00",
+          "Duracao": 0,
+          "TempoTotalStr": "08h 45m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 0,
+          "FlightCode": "G31357G39168",
+          "Periodo": 1,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            },
+            {
+              "Bagagem": 1,
+              "TextoBagagem": "Até 1 bagagens para despachar",
+              "Quantidade": 1
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": null,
+          "IdsViagensVolta": null,
+          "KeyIdViagensVolta": ""
+        },
+        {
+          "Token": "e1fc565f01e04ea19ab6993172ab666b",
+          "IdCia": 2,
+          "CiaParceira": null,
+          "Cia": null,
+          "PontosAdulto": -1,
+          "PontosCrianca": -1,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-1623",
+              "Saida": "2025-07-19T06:30:00",
+              "Chegada": "2025-07-19T07:50:00",
+              "Origem": "CNF",
+              "Destino": "BSB",
+              "Duracao": 80,
+              "Tempo": "01:20",
+              "TempoEspera": "00h 45m",
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            },
+            {
+              "Numero": "G3-2074",
+              "Saida": "2025-07-19T08:35:00",
+              "Chegada": "2025-07-19T10:20:00",
+              "Origem": "BSB",
+              "Destino": "GIG",
+              "Duracao": 105,
+              "Tempo": "01:45",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-BSB_BSB-GIG",
+          "Tarifas": [
+            {
+              "SegmentClass": null,
+              "Tipo": "PLUS",
+              "ValorAdulto": 2541.9,
+              "ValorCrianca": 0,
+              "TaxaEmbarque": 33.56,
+              "Classe": "Economica",
+              "BagagensInclusas": [
+                {
+                  "Bagagem": 0,
+                  "TextoBagagem": "1 bagagem de mão",
+                  "Quantidade": 1
+                },
+                {
+                  "Bagagem": 1,
+                  "TextoBagagem": "Até 1 bagagens para despachar",
+                  "Quantidade": 1
+                }
+              ]
+            }
+          ],
+          "ValorAdulto": 2541.9,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 0,
+          "ValorAdultoNaCia": 2541.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 2541.9,
+          "ValorTotalComTaxa": 2575.46,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T06:30:00",
+          "Chegada": "2025-07-19T10:20:00",
+          "Duracao": 0,
+          "TempoTotalStr": "03h 50m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 0,
+          "FlightCode": "G31623G32074",
+          "Periodo": 1,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            },
+            {
+              "Bagagem": 1,
+              "TextoBagagem": "Até 1 bagagens para despachar",
+              "Quantidade": 1
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": null,
+          "IdsViagensVolta": null,
+          "KeyIdViagensVolta": ""
+        },
+        {
+          "Token": "6df53234627747f6b11dc922f555903d",
+          "IdCia": 2,
+          "CiaParceira": null,
+          "Cia": null,
+          "PontosAdulto": -1,
+          "PontosCrianca": -1,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-1623",
+              "Saida": "2025-07-19T06:30:00",
+              "Chegada": "2025-07-19T07:50:00",
+              "Origem": "CNF",
+              "Destino": "BSB",
+              "Duracao": 80,
+              "Tempo": "01:20",
+              "TempoEspera": "03h 40m",
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            },
+            {
+              "Numero": "G3-9227",
+              "Saida": "2025-07-19T11:30:00",
+              "Chegada": "2025-07-19T13:15:00",
+              "Origem": "BSB",
+              "Destino": "GIG",
+              "Duracao": 105,
+              "Tempo": "01:45",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-BSB_BSB-GIG",
+          "Tarifas": [
+            {
+              "SegmentClass": null,
+              "Tipo": "PLUS",
+              "ValorAdulto": 2541.9,
+              "ValorCrianca": 0,
+              "TaxaEmbarque": 33.56,
+              "Classe": "Economica",
+              "BagagensInclusas": [
+                {
+                  "Bagagem": 0,
+                  "TextoBagagem": "1 bagagem de mão",
+                  "Quantidade": 1
+                },
+                {
+                  "Bagagem": 1,
+                  "TextoBagagem": "Até 1 bagagens para despachar",
+                  "Quantidade": 1
+                }
+              ]
+            }
+          ],
+          "ValorAdulto": 2541.9,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 0,
+          "ValorAdultoNaCia": 2541.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 2541.9,
+          "ValorTotalComTaxa": 2575.46,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T06:30:00",
+          "Chegada": "2025-07-19T13:15:00",
+          "Duracao": 0,
+          "TempoTotalStr": "06h 45m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 0,
+          "FlightCode": "G31623G39227",
+          "Periodo": 1,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            },
+            {
+              "Bagagem": 1,
+              "TextoBagagem": "Até 1 bagagens para despachar",
+              "Quantidade": 1
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": null,
+          "IdsViagensVolta": null,
+          "KeyIdViagensVolta": ""
+        },
+        {
+          "Token": "1fb28956229a4eea8fe58ee880ac6af5",
+          "IdCia": 2,
+          "CiaParceira": null,
+          "Cia": null,
+          "PontosAdulto": -1,
+          "PontosCrianca": -1,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-1323",
+              "Saida": "2025-07-19T11:00:00",
+              "Chegada": "2025-07-19T12:20:00",
+              "Origem": "CNF",
+              "Destino": "GRU",
+              "Duracao": 80,
+              "Tempo": "01:20",
+              "TempoEspera": "01h 25m",
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            },
+            {
+              "Numero": "G3-9168",
+              "Saida": "2025-07-19T13:45:00",
+              "Chegada": "2025-07-19T14:50:00",
+              "Origem": "GRU",
+              "Destino": "GIG",
+              "Duracao": 65,
+              "Tempo": "01:05",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-GRU_GRU-GIG",
+          "Tarifas": [
+            {
+              "SegmentClass": null,
+              "Tipo": "PLUS",
+              "ValorAdulto": 2541.9,
+              "ValorCrianca": 0,
+              "TaxaEmbarque": 33.56,
+              "Classe": "Economica",
+              "BagagensInclusas": [
+                {
+                  "Bagagem": 0,
+                  "TextoBagagem": "1 bagagem de mão",
+                  "Quantidade": 1
+                },
+                {
+                  "Bagagem": 1,
+                  "TextoBagagem": "Até 1 bagagens para despachar",
+                  "Quantidade": 1
+                }
+              ]
+            }
+          ],
+          "ValorAdulto": 2541.9,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 0,
+          "ValorAdultoNaCia": 2541.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 2541.9,
+          "ValorTotalComTaxa": 2575.46,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T11:00:00",
+          "Chegada": "2025-07-19T14:50:00",
+          "Duracao": 0,
+          "TempoTotalStr": "03h 50m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 0,
+          "FlightCode": "G31323G39168",
+          "Periodo": 1,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            },
+            {
+              "Bagagem": 1,
+              "TextoBagagem": "Até 1 bagagens para despachar",
+              "Quantidade": 1
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": null,
+          "IdsViagensVolta": null,
+          "KeyIdViagensVolta": ""
+        },
+        {
+          "Token": "b0d79f3354e14497bf8a3eab22fc1078",
+          "IdCia": 2,
+          "CiaParceira": null,
+          "Cia": null,
+          "PontosAdulto": -1,
+          "PontosCrianca": -1,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-2089",
+              "Saida": "2025-07-19T06:00:00",
+              "Chegada": "2025-07-19T07:15:00",
+              "Origem": "CNF",
+              "Destino": "GIG",
+              "Duracao": 75,
+              "Tempo": "01:15",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-GIG",
+          "Tarifas": [
+            {
+              "SegmentClass": null,
+              "Tipo": "MAX",
+              "ValorAdulto": 2711.9,
+              "ValorCrianca": 0,
+              "TaxaEmbarque": 33.56,
+              "Classe": "Economica",
+              "BagagensInclusas": [
+                {
+                  "Bagagem": 0,
+                  "TextoBagagem": "1 bagagem de mão",
+                  "Quantidade": 1
+                },
+                {
+                  "Bagagem": 1,
+                  "TextoBagagem": "Até 2 bagagens para despachar",
+                  "Quantidade": 2
+                }
+              ]
+            }
+          ],
+          "ValorAdulto": 2711.9,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 0,
+          "ValorAdultoNaCia": 2711.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 2711.9,
+          "ValorTotalComTaxa": 2745.46,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T06:00:00",
+          "Chegada": "2025-07-19T07:15:00",
+          "Duracao": 0,
+          "TempoTotalStr": "01h 15m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 0,
+          "FlightCode": "G32089",
+          "Periodo": 1,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            },
+            {
+              "Bagagem": 1,
+              "TextoBagagem": "Até 2 bagagens para despachar",
+              "Quantidade": 2
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": null,
+          "IdsViagensVolta": null,
+          "KeyIdViagensVolta": ""
+        },
+        {
+          "Token": "3ac0d05598af4ba7b130a851f81257e7",
+          "IdCia": 2,
+          "CiaParceira": null,
+          "Cia": null,
+          "PontosAdulto": -1,
+          "PontosCrianca": -1,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-1357",
+              "Saida": "2025-07-19T06:05:00",
+              "Chegada": "2025-07-19T07:25:00",
+              "Origem": "CNF",
+              "Destino": "GRU",
+              "Duracao": 80,
+              "Tempo": "01:20",
+              "TempoEspera": "06h 20m",
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            },
+            {
+              "Numero": "G3-9168",
+              "Saida": "2025-07-19T13:45:00",
+              "Chegada": "2025-07-19T14:50:00",
+              "Origem": "GRU",
+              "Destino": "GIG",
+              "Duracao": 65,
+              "Tempo": "01:05",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-GRU_GRU-GIG",
+          "Tarifas": [
+            {
+              "SegmentClass": null,
+              "Tipo": "MAX",
+              "ValorAdulto": 2711.9,
+              "ValorCrianca": 0,
+              "TaxaEmbarque": 33.56,
+              "Classe": "Economica",
+              "BagagensInclusas": [
+                {
+                  "Bagagem": 0,
+                  "TextoBagagem": "1 bagagem de mão",
+                  "Quantidade": 1
+                },
+                {
+                  "Bagagem": 1,
+                  "TextoBagagem": "Até 2 bagagens para despachar",
+                  "Quantidade": 2
+                }
+              ]
+            }
+          ],
+          "ValorAdulto": 2711.9,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 0,
+          "ValorAdultoNaCia": 2711.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 2711.9,
+          "ValorTotalComTaxa": 2745.46,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T06:05:00",
+          "Chegada": "2025-07-19T14:50:00",
+          "Duracao": 0,
+          "TempoTotalStr": "08h 45m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 0,
+          "FlightCode": "G31357G39168",
+          "Periodo": 1,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            },
+            {
+              "Bagagem": 1,
+              "TextoBagagem": "Até 2 bagagens para despachar",
+              "Quantidade": 2
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": null,
+          "IdsViagensVolta": null,
+          "KeyIdViagensVolta": ""
+        },
+        {
+          "Token": "420cefc4247b41d183e69fb081a3a23e",
+          "IdCia": 2,
+          "CiaParceira": null,
+          "Cia": null,
+          "PontosAdulto": -1,
+          "PontosCrianca": -1,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-1623",
+              "Saida": "2025-07-19T06:30:00",
+              "Chegada": "2025-07-19T07:50:00",
+              "Origem": "CNF",
+              "Destino": "BSB",
+              "Duracao": 80,
+              "Tempo": "01:20",
+              "TempoEspera": "00h 45m",
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            },
+            {
+              "Numero": "G3-2074",
+              "Saida": "2025-07-19T08:35:00",
+              "Chegada": "2025-07-19T10:20:00",
+              "Origem": "BSB",
+              "Destino": "GIG",
+              "Duracao": 105,
+              "Tempo": "01:45",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-BSB_BSB-GIG",
+          "Tarifas": [
+            {
+              "SegmentClass": null,
+              "Tipo": "MAX",
+              "ValorAdulto": 2711.9,
+              "ValorCrianca": 0,
+              "TaxaEmbarque": 33.56,
+              "Classe": "Economica",
+              "BagagensInclusas": [
+                {
+                  "Bagagem": 0,
+                  "TextoBagagem": "1 bagagem de mão",
+                  "Quantidade": 1
+                },
+                {
+                  "Bagagem": 1,
+                  "TextoBagagem": "Até 2 bagagens para despachar",
+                  "Quantidade": 2
+                }
+              ]
+            }
+          ],
+          "ValorAdulto": 2711.9,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 0,
+          "ValorAdultoNaCia": 2711.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 2711.9,
+          "ValorTotalComTaxa": 2745.46,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T06:30:00",
+          "Chegada": "2025-07-19T10:20:00",
+          "Duracao": 0,
+          "TempoTotalStr": "03h 50m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 0,
+          "FlightCode": "G31623G32074",
+          "Periodo": 1,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            },
+            {
+              "Bagagem": 1,
+              "TextoBagagem": "Até 2 bagagens para despachar",
+              "Quantidade": 2
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": null,
+          "IdsViagensVolta": null,
+          "KeyIdViagensVolta": ""
+        },
+        {
+          "Token": "ace283fad1ac40b591c3cf92523d1055",
+          "IdCia": 2,
+          "CiaParceira": null,
+          "Cia": null,
+          "PontosAdulto": -1,
+          "PontosCrianca": -1,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-1623",
+              "Saida": "2025-07-19T06:30:00",
+              "Chegada": "2025-07-19T07:50:00",
+              "Origem": "CNF",
+              "Destino": "BSB",
+              "Duracao": 80,
+              "Tempo": "01:20",
+              "TempoEspera": "03h 40m",
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            },
+            {
+              "Numero": "G3-9227",
+              "Saida": "2025-07-19T11:30:00",
+              "Chegada": "2025-07-19T13:15:00",
+              "Origem": "BSB",
+              "Destino": "GIG",
+              "Duracao": 105,
+              "Tempo": "01:45",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-BSB_BSB-GIG",
+          "Tarifas": [
+            {
+              "SegmentClass": null,
+              "Tipo": "MAX",
+              "ValorAdulto": 2711.9,
+              "ValorCrianca": 0,
+              "TaxaEmbarque": 33.56,
+              "Classe": "Economica",
+              "BagagensInclusas": [
+                {
+                  "Bagagem": 0,
+                  "TextoBagagem": "1 bagagem de mão",
+                  "Quantidade": 1
+                },
+                {
+                  "Bagagem": 1,
+                  "TextoBagagem": "Até 2 bagagens para despachar",
+                  "Quantidade": 2
+                }
+              ]
+            }
+          ],
+          "ValorAdulto": 2711.9,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 0,
+          "ValorAdultoNaCia": 2711.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 2711.9,
+          "ValorTotalComTaxa": 2745.46,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T06:30:00",
+          "Chegada": "2025-07-19T13:15:00",
+          "Duracao": 0,
+          "TempoTotalStr": "06h 45m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 0,
+          "FlightCode": "G31623G39227",
+          "Periodo": 1,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            },
+            {
+              "Bagagem": 1,
+              "TextoBagagem": "Até 2 bagagens para despachar",
+              "Quantidade": 2
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": null,
+          "IdsViagensVolta": null,
+          "KeyIdViagensVolta": ""
+        },
+        {
+          "Token": "d0acbd525dfe4be4b92c9555bf67d5f6",
+          "IdCia": 2,
+          "CiaParceira": null,
+          "Cia": null,
+          "PontosAdulto": -1,
+          "PontosCrianca": -1,
+          "QntdBagagem": 0,
+          "QtdBagagemInclusa": 0,
+          "Taxas": {
+            "IdCia": 2,
+            "Servico": 0,
+            "ServicoChd": 0,
+            "Embarque": 33.56,
+            "EmbarqueChd": 0,
+            "EmbarqueStr": null,
+            "EmissaoResgate": 0,
+            "ValorFranquia": 0,
+            "Bagagens": []
+          },
+          "Voos": [
+            {
+              "Numero": "G3-1323",
+              "Saida": "2025-07-19T11:00:00",
+              "Chegada": "2025-07-19T12:20:00",
+              "Origem": "CNF",
+              "Destino": "GRU",
+              "Duracao": 80,
+              "Tempo": "01:20",
+              "TempoEspera": "01h 25m",
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            },
+            {
+              "Numero": "G3-9168",
+              "Saida": "2025-07-19T13:45:00",
+              "Chegada": "2025-07-19T14:50:00",
+              "Origem": "GRU",
+              "Destino": "GIG",
+              "Duracao": 65,
+              "Tempo": "01:05",
+              "TempoEspera": null,
+              "Classe": 0,
+              "ClasseStr": "Economica"
+            }
+          ],
+          "ConfiguracoesRotas": "CNF-GRU_GRU-GIG",
+          "Tarifas": [
+            {
+              "SegmentClass": null,
+              "Tipo": "MAX",
+              "ValorAdulto": 2711.9,
+              "ValorCrianca": 0,
+              "TaxaEmbarque": 33.56,
+              "Classe": "Economica",
+              "BagagensInclusas": [
+                {
+                  "Bagagem": 0,
+                  "TextoBagagem": "1 bagagem de mão",
+                  "Quantidade": 1
+                },
+                {
+                  "Bagagem": 1,
+                  "TextoBagagem": "Até 2 bagagens para despachar",
+                  "Quantidade": 2
+                }
+              ]
+            }
+          ],
+          "ValorAdulto": 2711.9,
+          "ValorAdultoStr": null,
+          "ValorAdultoSemCalc": 0,
+          "ValorAdultoNaCia": 2711.9,
+          "ValorCrianca": 0,
+          "ValorBebe": 0,
+          "ValorTotal": 2711.9,
+          "ValorTotalComTaxa": 2745.46,
+          "ValorTotalTaxas": 33.56,
+          "FareOriginType": null,
+          "Origem": "CNF",
+          "Destino": "GIG",
+          "Saida": "2025-07-19T11:00:00",
+          "Chegada": "2025-07-19T14:50:00",
+          "Duracao": 0,
+          "TempoTotalStr": "03h 50m",
+          "ValorTxServico": 0,
+          "PercentualEconomia": 0,
+          "FlightCode": "G31323G39168",
+          "Periodo": 1,
+          "Adultos": 0,
+          "Criancas": 0,
+          "BagagensInclusas": [
+            {
+              "Bagagem": 0,
+              "TextoBagagem": "1 bagagem de mão",
+              "Quantidade": 1
+            },
+            {
+              "Bagagem": 1,
+              "TextoBagagem": "Até 2 bagagens para despachar",
+              "Quantidade": 2
+            }
+          ],
+          "Site": null,
+          "Nome": null,
+          "UrlPesquisa": null,
+          "Classe": 0,
+          "JourneyKey": null,
+          "fareAvailabilityKey": null,
+          "RexturFlightGroup": "00000000-0000-0000-0000-000000000000",
+          "FlightReturn": null,
+          "IdViagem": null,
+          "IdsViagensVolta": null,
+          "KeyIdViagensVolta": ""
+        }
+      ],
+      "Volta": [],
+      "Companhia": "Gol",
+      "CompanhiaVolta": null,
+      "Aeroportos": [
+        {
+          "Index": 0,
+          "Iata": "CNF",
+          "Iatas": null,
+          "PegarFotos": false,
+          "Nome": "Tancredo Neves International Airport",
+          "Cidade": "Belo Horizonte - Confins",
+          "Estado": "Minas-Gerais",
+          "Pais": "BR",
+          "Latitude": "-19.6244430542",
+          "Longitude": "-43.9719429016",
+          "TimeZone": "America/Sao_Paulo",
+          "urlImagens": [
+            "repository/places/Belo%20Horizonte%20-%20Confins/3",
+            "repository/places/Belo%20Horizonte%20-%20Confins/0",
+            "repository/places/Belo%20Horizonte%20-%20Confins/2",
+            "repository/places/Belo%20Horizonte%20-%20Confins/5"
+          ],
+          "Internacional": false,
+          "Prioridade": 100,
+          "Icao": null
+        },
+        {
+          "Index": 0,
+          "Iata": "GIG",
+          "Iatas": null,
+          "PegarFotos": false,
+          "Nome": "Galeao - Antonio Carlos Jobim International Airport",
+          "Cidade": "Rio de Janeiro - Galeão",
+          "Estado": "Rio-de-Janeiro",
+          "Pais": "BR",
+          "Latitude": "-22.8099994659",
+          "Longitude": "-43.2505569458",
+          "TimeZone": "America/Sao_Paulo",
+          "urlImagens": [
+            "repository/places/Rio%20de%20Janeiro%20-%20Gale%C3%A3o/2",
+            "repository/places/Rio%20de%20Janeiro%20-%20Gale%C3%A3o/5",
+            "repository/places/Rio%20de%20Janeiro%20-%20Gale%C3%A3o/4",
+            "repository/places/Rio%20de%20Janeiro%20-%20Gale%C3%A3o/1"
+          ],
+          "Internacional": false,
+          "Prioridade": 85,
+          "Icao": null
+        },
+        {
+          "Index": 0,
+          "Iata": "GRU",
+          "Iatas": null,
+          "PegarFotos": false,
+          "Nome": "Guarulhos - Governador Andre Franco Montoro International Airport",
+          "Cidade": "São Paulo - Guarulhos",
+          "Estado": "Sao-Paulo",
+          "Pais": "BR",
+          "Latitude": "-23.4355564117",
+          "Longitude": "-46.4730567932",
+          "TimeZone": "America/Sao_Paulo",
+          "urlImagens": [
+            "repository/places/S%C3%A3o%20Paulo%20-%20Guarulhos/3",
+            "repository/places/S%C3%A3o%20Paulo%20-%20Guarulhos/2",
+            "repository/places/S%C3%A3o%20Paulo%20-%20Guarulhos/4",
+            "repository/places/S%C3%A3o%20Paulo%20-%20Guarulhos/1"
+          ],
+          "Internacional": false,
+          "Prioridade": 85,
+          "Icao": null
+        },
+        {
+          "Index": 0,
+          "Iata": "CGH",
+          "Iatas": null,
+          "PegarFotos": false,
+          "Nome": "Congonhas Airport",
+          "Cidade": "São Paulo - Congonhas",
+          "Estado": "Sao-Paulo",
+          "Pais": "BR",
+          "Latitude": "-23.6261100769",
+          "Longitude": "-46.6563873291",
+          "TimeZone": "America/Sao_Paulo",
+          "urlImagens": [
+            "repository/places/S%C3%A3o%20Paulo%20-%20Congonhas/5",
+            "repository/places/S%C3%A3o%20Paulo%20-%20Congonhas/3",
+            "repository/places/S%C3%A3o%20Paulo%20-%20Congonhas/1"
+          ],
+          "Internacional": false,
+          "Prioridade": 50,
+          "Icao": null
+        },
+        {
+          "Index": 0,
+          "Iata": "BSB",
+          "Iatas": null,
+          "PegarFotos": false,
+          "Nome": "Presidente Juscelino Kubistschek International Airport",
+          "Cidade": "Brasília",
+          "Estado": "Federal-District",
+          "Pais": "BR",
+          "Latitude": "-15.8691673279",
+          "Longitude": "-47.9208335876",
+          "TimeZone": "America/Sao_Paulo",
+          "urlImagens": [
+            "repository/places/Bras%C3%ADlia/5",
+            "repository/places/Bras%C3%ADlia/4",
+            "repository/places/Bras%C3%ADlia/2"
+          ],
+          "Internacional": false,
+          "Prioridade": 50,
+          "Icao": null
+        }
+      ],
+      "Request": null,
+      "IsStarAlliance": false,
+      "LogErros": [],
+      "PesquisaMilhasHabilitada": true,
+      "PesquisaPaganteHabilitada": true,
+      "SemDisponibilidade": false,
+      "ByCache": false,
+      "ErroConsulta": null
+    }
+  ],
+  "Completed": true,
+  "TotalItens": 0,
+  "Info": null,
+  "JsonObjectErro": null,
+  "AuxiliarResponse": null
+}

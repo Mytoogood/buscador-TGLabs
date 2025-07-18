@@ -303,36 +303,35 @@ export const moblixService = {
     }
   },
 
-  // Simular busca de voos
+  // Busca de voos real na API
   async buscarVoos(origem, destino, dataIda, dataVolta = null) {
     try {
-      // Simula busca de voos usando dados da API
-      const companhias = ['Latam', 'Gol', 'Azul', 'Avianca']
-      const voos = []
+      await ensureAuthenticated()
       
-      for (let i = 0; i < 5; i++) {
-        const cia = companhias[Math.floor(Math.random() * companhias.length)]
-        const preco = Math.floor(Math.random() * 800) + 200
-        
-        voos.push({
-          id: `${cia}_${Math.random().toString(36).substring(7)}`,
-          companhia: cia,
-          numeroVoo: `${cia.substring(0, 2).toUpperCase()}-${Math.floor(Math.random() * 9000) + 1000}`,
-          origem,
-          destino,
-          dataIda,
-          dataVolta,
-          preco,
-          horarioSaida: `${Math.floor(Math.random() * 12) + 6}:${Math.floor(Math.random() * 60).toString().padStart(2, '0')}`,
-          horarioChegada: `${Math.floor(Math.random() * 12) + 8}:${Math.floor(Math.random() * 60).toString().padStart(2, '0')}`,
-          escalas: Math.random() > 0.7 ? 1 : 0
-        })
+      const consultaData = {
+        origem: origem,
+        destino: destino,
+        dataIda: dataIda,
+        dataVolta: dataVolta,
+        quantidadeAdultos: 1,
+        quantidadeCriancas: 0,
+        quantidadeBebes: 0,
+        classe: "ECONOMICA"
       }
       
-      return {
-        Success: true,
-        Data: voos,
-        TotalItens: voos.length
+      console.log('Realizando consulta real de voos:', consultaData)
+      
+      const response = await moblixApi.post('/api/ConsultaAereo/Consultar', consultaData)
+      
+      if (response.data && response.data.Success) {
+        return {
+          Success: true,
+          Data: response.data.Voos || [],
+          TotalItens: (response.data.Voos || []).length
+        }
+      } else {
+        console.warn('Resposta da API sem dados de voos:', response.data)
+        throw new Error('Falha na consulta de voos: ' + (response.data?.MensagemErro || 'Resposta sem dados'))
       }
     } catch (error) {
       console.error('Erro ao buscar voos:', error)

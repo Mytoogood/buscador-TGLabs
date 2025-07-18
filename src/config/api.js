@@ -4,8 +4,8 @@ import axios from 'axios';
 export const moblixConfig = {
   baseURL: import.meta.env.VITE_MOBLIX_API_URL || 'https://api.moblix.com.br',
   auth: {
-    username: import.meta.env.VITE_MOBLIX_USERNAME || 'toogood',
-    password: import.meta.env.VITE_MOBLIX_PASSWORD || 'toogood12345'
+    username: import.meta.env.VITE_MOBLIX_USERNAME || 'TooGood',
+    password: import.meta.env.VITE_MOBLIX_PASSWORD || '23a01acf223df93bbd08843a27d1fe7a873321ed13e4268a0a09aca9e92cc4c7'
   },
   // Configurações padrão para as requisições
   defaults: {

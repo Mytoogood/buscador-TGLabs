@@ -1,0 +1,60 @@
+{
+  "airline": "Latam",
+  "airlineId": 1,
+  "data": {
+    "Data": [{
+      "Ida": [
+        {
+          "Token": "latam_milhas_001",
+          "IdCia": 1,
+          "Cia": {
+            "Nome": "Latam",
+            "Iata": "LA"
+          },
+          "PontosAdulto": 25000,
+          "PontosCrianca": 0,
+          "Voos": [{
+            "Numero": "LA-3001",
+            "Saida": "2025-07-09T08:00:00",
+            "Chegada": "2025-07-09T09:30:00",
+            "Origem": "SAO",
+            "Destino": "RIO",
+            "Duracao": 90,
+            "Tempo": "01:30",
+            "ClasseStr": "Economica"
+          }],
+          "ValorAdulto": 0,
+          "ValorTotal": 0,
+          "ValorTotalComTaxa": 0,
+          "Origem": "SAO",
+          "Destino": "RIO"
+        },
+        {
+          "Token": "latam_milhas_002",
+          "IdCia": 1,
+          "Cia": {
+            "Nome": "Latam",
+            "Iata": "LA"
+          },
+          "PontosAdulto": 35000,
+          "PontosCrianca": 0,
+          "Voos": [{
+            "Numero": "LA-3002",
+            "Saida": "2025-07-09T14:00:00",
+            "Chegada": "2025-07-09T15:30:00",
+            "Origem": "SAO",
+            "Destino": "RIO",
+            "Duracao": 90,
+            "Tempo": "01:30",
+            "ClasseStr": "Economica"
+          }],
+          "ValorAdulto": 0,
+          "ValorTotal": 0,
+          "ValorTotalComTaxa": 0,
+          "Origem": "SAO",
+          "Destino": "RIO"
+        }
+      ]
+    }]
+  }
+}

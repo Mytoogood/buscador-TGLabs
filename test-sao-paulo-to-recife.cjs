@@ -28,10 +28,17 @@ async function testSaoPauloToRecife() {
 
     // Companhias para testar
     const companies = [
-      { id: null, name: 'Todas as companhias' },
+      { id: -1, name: 'Todas as companhias' },
       { id: 1, name: 'Latam' },
       { id: 2, name: 'Gol' },
-      { id: 3, name: 'Azul' }
+      { id: 3, name: 'Azul' },
+      { id: 11, name: 'TAP Air Portugal' },
+      { id: 13, name: 'Copa Airlines' },
+      { id: 22, name: 'American Airlines' },
+      { id: 26, name: 'Iberia' },
+      { id: 34, name: 'Livelo' },
+      { id: 1200, name: 'Azul Interline' },
+      { id: 0, name: 'Nenhuma companhia específica' }
     ];
 
     let foundFlights = false;
