@@ -5,8 +5,6 @@ import Login from '@/views/Login.vue'
 import Dashboard from '@/views/Dashboard.vue'
 import About from '@/views/About.vue'
 import AreaLogada from '@/views/AreaLogada.vue'
-import Testimonials from '@/views/Testimonials.vue'
-import TestPage from '@/views/TestPage.vue'
 import MoblixExplorer from '@/views/MoblixExplorer.vue'
 import FaleComigo from '@/views/FaleComigo.vue'
 import AlertasImperdiveis from '@/views/AlertasImperdiveis.vue'
@@ -32,14 +30,6 @@ const routes = [
     }
   },
   {
-    path: '/depoimentos',
-    name: 'Testimonials',
-    component: Testimonials,
-    meta: {
-      title: 'Depoimentos - Júlio Martins | Milhas & Viagens'
-    }
-  },
-  {
     path: '/register',
     name: 'Register',
     component: Register,
@@ -55,14 +45,6 @@ const routes = [
     meta: {
       title: 'Explorador Moblix - Júlio Martins | Milhas & Viagens',
       requiresAuth: true
-    }
-  },
-  {
-    path: '/teste',
-    name: 'TestPage',
-    component: TestPage,
-    meta: {
-      title: 'Página de Teste - Júlio Martins | Milhas & Viagens'
     }
   },
   {
