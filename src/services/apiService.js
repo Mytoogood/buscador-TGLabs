@@ -263,12 +263,12 @@ export const moblixService = {
       clienteNome: 'Maria Santos',
       clienteEmail: 'maria@exemplo.com',
       dataReserva: new Date().toISOString(),
-      tipoReserva: 'hotel',
+      tipoReserva: 'voo',
       detalhes: {
-        checkin: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
-        checkout: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
-        quartos: 1,
-        hospedes: 2
+        origem: 'GRU',
+        destino: 'BSB',
+        dataIda: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+        passageiros: 1
       }
     }
   },

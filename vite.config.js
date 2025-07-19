@@ -45,41 +45,6 @@ proxy.on('proxyReq', (proxyReq, req, _res) => {
           });
         }
       },
-      // Configuração do proxy para a API Moblix - rotas /hotel/api, /flight/api, /oferta/api
-      '/hotel': {
-        target: 'https://api.moblix.com.br',
-        changeOrigin: true,
-        secure: false,
-        ws: true,
-        logLevel: 'debug',
-        rewrite: (path) => {
-          console.log('Reescrevendo caminho /hotel:', path);
-          return path;
-        },
-        configure: (proxy, _options) => {
-          proxy.on('error', (err, _req, _res) => {
-            console.error('Erro no proxy /hotel:', err);
-          });
-          proxy.on('proxyReq', (proxyReq, req, _res) => {
-            // Adiciona os cabeçalhos necessários para a API Moblix
-            proxyReq.setHeader('Host', 'api.moblix.com.br');
-            proxyReq.setHeader('Referer', 'https://moblix.com.br/');
-            proxyReq.setHeader('X-Requested-With', 'XMLHttpRequest');
-            proxyReq.setHeader('Accept', 'application/json');
-            proxyReq.setHeader('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36');
-            
-            console.log(`[PROXY /hotel] ${req.method} ${req.url}`);
-          });
-          proxy.on('proxyRes', (proxyRes, req, _res) => {
-            // Adiciona headers CORS
-            proxyRes.headers['Access-Control-Allow-Origin'] = '*';
-            proxyRes.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE, PATCH, OPTIONS';
-            proxyRes.headers['Access-Control-Allow-Headers'] = 'X-Requested-With, content-type, Authorization, Origin, Referer';
-            
-            console.log(`[PROXY /hotel] Resposta ${proxyRes.statusCode} para ${req.method} ${req.url}`);
-          });
-        }
-      },
       // Configuração do proxy para a API Moblix - rotas /aereo/api
       '/aereo': {
         target: 'https://api.moblix.com.br',

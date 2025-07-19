@@ -1,7 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/views/Home.vue'
-import HotelSearch from '@/views/HotelSearch.vue'
-import BookingManagement from '@/views/BookingManagement.vue'
 import Register from '@/views/Register.vue'
 import Login from '@/views/Login.vue'
 import Dashboard from '@/views/Dashboard.vue'
@@ -112,15 +110,6 @@ const routes = [
     }
   },
   {
-    path: '/search',
-    name: 'HotelSearch',
-    component: HotelSearch,
-    meta: {
-      title: 'Hotel Search - Moblix',
-      requiresAuth: true
-    }
-  },
-  {
     path: '/flights',
     name: 'Flights',
     component: () => import('@/views/Flights.vue'),
@@ -130,29 +119,11 @@ const routes = [
     }
   },
   {
-    path: '/hotels',
-    name: 'Hotels',
-    component: () => import('@/views/Hotels.vue'),
-    meta: {
-      title: 'Busca de Hotéis - Moblix',
-      requiresAuth: true
-    }
-  },
-  {
     path: '/ofertas',
     name: 'FlightOffers',
     component: () => import('@/views/FlightOffers.vue'),
     meta: {
       title: 'Ofertas de Voos - Moblix',
-      requiresAuth: true
-    }
-  },
-  {
-    path: '/bookings',
-    name: 'BookingManagement',
-    component: BookingManagement,
-    meta: {
-      title: 'My Bookings - Moblix',
       requiresAuth: true
     }
   },

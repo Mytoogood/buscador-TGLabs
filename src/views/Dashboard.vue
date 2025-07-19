@@ -263,13 +263,6 @@
           Consultoria
         </a>
         <router-link
-          to="/search"
-          class="flex items-center justify-center p-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-200"
-        >
-          <span class="text-lg mr-2">🏨</span>
-          Buscar Hotéis
-        </router-link>
-        <router-link
           to="/bookings"
           class="flex items-center justify-center p-4 bg-gradient-to-r from-purple-500 to-violet-500 text-white rounded-lg hover:from-purple-600 hover:to-violet-600 transition-all duration-200"
         >
